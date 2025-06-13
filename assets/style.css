@@ -6,7 +6,8 @@
   background-position: center center;
   background-size: cover;
   user-select: none;
-  outline-color: tomato;
+  outline-color: rgb(21, 70, 204);
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 body {
   overflow-x: hidden;
@@ -24,7 +25,7 @@ img {
   width: 0.5rem;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: tomato;
+  background-color: rgb(21, 70, 204);
   border-radius: 1rem;
 }
 ::-webkit-scrollbar-track {
@@ -57,7 +58,7 @@ img {
   animation: hoverAnimation 0.3s ease-in-out forwards;
 }
 .desktopNavbar a:hover {
-  color: tomato;
+  color: rgb(21, 70, 204);
 }
 @keyframes hoverAnimation {
   from {
@@ -88,7 +89,7 @@ details a {
   color: #899098;
 }
 details a:hover {
-  color: tomato;
+  color: rgb(21, 70, 204);
 }
 details > summary {
   direction: rtl;
@@ -169,10 +170,10 @@ details[open] > summary {
   background-color: transparent !important;
 }
 .swiper:hover .swiper-scrollbar {
-  background-color: #f776569c !important;
+  background-color: rgb(145, 145, 145) !important;
 }
 .swiper:hover .swiper-scrollbar-drag {
-  background-color: tomato !important;
+  background-color: rgb(145, 145, 145) !important;
 }
 @media screen and (max-width: 1100px) {
   .swiper {
@@ -200,7 +201,7 @@ details[open] > summary {
   background-color: #616161 !important;
 }
 .aside_section:hover::-webkit-scrollbar-thumb {
-  background-color: tomato !important;
+  background-color: rgb(21, 70, 204) !important;
 }
 
 .product_hover_pic {
@@ -231,8 +232,8 @@ hr {
   border-color: rgba(116, 116, 116, 0.733) !important;
 }
 hr.title {
-  border-color: tomato !important;
+  border-color: rgb(21, 70, 204) !important;
 }
 footer a:hover {
-  color: tomato;
+  color: rgb(21, 70, 204);
 }

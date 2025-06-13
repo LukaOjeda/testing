@@ -31,48 +31,9 @@
     <title>Fuerte Hogar</title>
   </head>
   <body>
-    <!--! newspaper popup -->
-    <div
-      id="newspaper"
-      class="z-20 fixed w-screen h-screen hidden items-center justify-center"
-    >
-      <div
-        id="newspaperOverlay"
-        class="z-10 fixed top-0 w-screen h-screen bg-[#00000066]"
-      ></div>
-      <div
-        id="newspaperBox"
-        class="z-20 w-4/5 lg:w-3/6 h-2/5 lg:h-3/5 bg-white flex items-center rounded-md overflow-hidden border shadow-md"
-      >
-        <div class="hidden md:flex md:w-1/2 h-full">
-          <img
-            class="w-full h-full"
-            src="./assets/images/newsletter.png"
-            alt="newsletter"
-          />
-        </div>
-        <div
-          class="w-full md:w-1/2 h-full flex flex-col justify-center p-12 px-8 gap-4 relative"
-        >
-          <button
-            class="closeButton absolute top-4 right-4 text-2xl hover:text-red-500"
-          >
-            <ion-icon name="close-circle-outline"></ion-icon>
-          </button>
-          <h3 class="text-xl font-bold text-gray-800">Subscribe Newsletter.</h3>
-          <p class="text-md text-gray-600 font-semibold">
-            Subscribe the <span class="text-lg font-semibold">Anon</span> to get
-            latest products and discount update.
-          </p>
-          <input class="border p-2" type="email" placeholder="Email Address" />
-          <button
-            class="rounded-md self-center py-2 px-3 bg-gray-900 text-white hover:bg-red-500"
-          >
-            SUBSCRIBE
-          </button>
-        </div>
-      </div>
-    </div>
+      <button
+        class="closeButton absolute top-4 right-4 text-2xl hover:text-blue-600">
+      </button>
 
     <header class="header w-full">
       <!--! topHeader -->
@@ -82,27 +43,28 @@
         <div class="flex w-full items-center justify-between p-4 md:px-20 border-b">
           <div class="icons hidden lg:flex items-center gap-2">
             <a
-              class="text-gray-700 bg-gray-300/50 p-1 rounded-md hover:scale-110 hover:text-white hover:bg-red-400 flex items-center justify-center transition-all"
+              class="text-gray-700 bg-gray-300/50 p-1 rounded-md hover:scale-110 hover:text-white hover:bg-blue-600 flex items-center justify-center transition-all"
               href="#"
             >
               <ion-icon name="logo-instagram"></ion-icon>
             </a>
             <a
-              class="text-gray-700 bg-gray-300/50 p-1 rounded-md hover:scale-110 hover:text-white hover:bg-red-400 flex items-center justify-center transition-all"
+              class="text-gray-700 bg-gray-300/50 p-1 rounded-md hover:scale-110 hover:text-white hover:bg-blue-600 flex items-center justify-center transition-all"
               href="#"
             >
-              <ion-icon name="logo-linkedin"></ion-icon>
+              <ion-icon name="logo-whatsapp"></ion-icon>
             </a>
             <a
-              class="text-gray-700 bg-gray-300/50 p-1 rounded-md hover:scale-110 hover:text-white hover:bg-red-400 flex items-center justify-center transition-all"
+              class="text-gray-700 bg-gray-300/50 p-1 rounded-md hover:scale-110 hover:text-white hover:bg-blue-600 flex items-center justify-center transition-all"
               href="#"
             >
-              <ion-icon name="logo-github"></ion-icon>
+              <ion-icon name="mail"></ion-icon>
             </a>
           </div>
           <h3 class="text-gray-400 font-semibold text-xs">
             ABRETURAS FUERTE HOGAR
           </h3>
+          
           <div class="select hidden md:flex">
 
           </div>
@@ -123,23 +85,6 @@
             </label>
           </form>
           <div class="icons hidden mr-2 text-3xl md:flex gap-8 text-gray-600">
-            <div class="relative">
-              <ion-icon name="person-outline"></ion-icon>
-            </div>
-            <div class="relative">
-              <span
-                class="text-xs text-center font-semibold text-white absolute -top-2 -right-2 w-4 h-4 bg-red-400 rounded-full"
-                >0</span
-              >
-              <ion-icon name="heart-outline"></ion-icon>
-            </div>
-            <div class="relative">
-              <span
-                class="text-xs text-center font-semibold text-white absolute -top-2 -right-2 w-4 h-4 bg-red-400 rounded-full"
-                >0</span
-              >
-              <ion-icon name="bag-handle-outline"></ion-icon>
-            </div>
           </div>
         </div>
       </div>
@@ -154,7 +99,7 @@
             <li class="nav_items relative">
               <a href="#Home">INICIO</a>
               <span
-                class="absolute bottom-0 left-0 w-0 h-0.5 bg-red-400 transition-all ease-in-out"
+                class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all ease-in-out"
               ></span>
             </li>
               <!--? hoverItems -->
@@ -162,7 +107,7 @@
             <li class="nav_items relative men_nav_item">
               <a href="#Men">PUERTAS</a>
               <span
-                class="absolute bottom-0 left-0 w-0 h-0.5 bg-red-400 transition-all ease-in-out"
+                class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all ease-in-out"
               ></span>
               <!--? hoverItems -->
               <ul
@@ -189,7 +134,7 @@
             <li class="nav_items relative women_nav_item">
               <a href="#Women">VENTANAS</a>
               <span
-                class="absolute bottom-0 left-0 w-0 h-0.5 bg-red-400 transition-all ease-in-out"
+                class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all ease-in-out"
               ></span>
               <!--? hoverItems -->
               <ul
@@ -216,7 +161,7 @@
             <li class="nav_items relative jewelry_nav_item">
               <a href="#Jewelry">PORTONES</a>
               <span
-                class="absolute bottom-0 left-0 w-0 h-0.5 bg-red-400 transition-all ease-in-out"
+                class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all ease-in-out"
               ></span>
               <!--? hoverItems -->
               <ul
@@ -240,7 +185,7 @@
             <li class="nav_items relative perfume_nav_item">
               <a href="#Perfume">NOSOTROS</a>
               <span
-                class="absolute bottom-0 left-0 w-0 h-0.5 bg-red-400 transition-all ease-in-out"
+                class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all ease-in-out"
               ></span>
               <!--? hoverItems -->
               <ul
@@ -251,13 +196,13 @@
             <li class="nav_items relative">
               <a href="#Blog">x</a>
               <span
-                class="absolute bottom-0 left-0 w-0 h-0.5 bg-red-400 transition-all ease-in-out"
+                class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all ease-in-out"
               ></span>
             </li>
             <li class="nav_items relative">
               <a href="#HotOffers">X</a>
               <span
-                class="absolute bottom-0 left-0 w-0 h-0.5 bg-red-400 transition-all ease-in-out"
+                class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all ease-in-out"
               ></span>
             </li>
           </ul>
@@ -295,8 +240,8 @@
           id="sidebarNavbar"
         >
           <div class="flex justify-between border-b-2 py-4">
-            <h3 class="text-red-400">Menu</h3>
-            <button class="closeButton hover:text-red-500">
+            <h3 class="text-blue-600">Menu</h3>
+            <button class="closeButton hover:text-blue-600">
               <ion-icon name="close-circle-outline"></ion-icon>
             </button>
           </div>
@@ -343,19 +288,19 @@
 
           <div class="icons flex items-center justify-center gap-4">
             <a
-              class="text-gray-900 bg-gray-300/50 p-2 rounded-md hover:scale-110 hover:text-white hover:bg-red-400 flex items-center justify-center"
+              class="text-gray-900 bg-gray-300/50 p-2 rounded-md hover:scale-110 hover:text-white hover:bg-blue-600 flex items-center justify-center"
               href="#"
             >
               <ion-icon name="logo-instagram"></ion-icon>
             </a>
             <a
-              class="text-gray-900 bg-gray-300/50 p-2 rounded-md hover:scale-110 hover:text-white hover:bg-red-400 flex items-center justify-center"
+              class="text-gray-900 bg-gray-300/50 p-2 rounded-md hover:scale-110 hover:text-white hover:bg-blue-600 flex items-center justify-center"
               href="#"
             >
               <ion-icon name="logo-linkedin"></ion-icon>
             </a>
             <a
-              class="text-gray-900 bg-gray-300/50 p-2 rounded-md hover:scale-110 hover:text-white hover:bg-red-400 flex items-center justify-center"
+              class="text-gray-900 bg-gray-300/50 p-2 rounded-md hover:scale-110 hover:text-white hover:bg-blue-600 flex items-center justify-center"
               href="#"
             >
               <ion-icon name="logo-github"></ion-icon>
@@ -370,8 +315,8 @@
         >
           <div class="categories w-full h-auto">
             <div class="w-full flex items-center justify-between">
-              <h1 class="text-lg font-semibold mb-4">CATEGORY</h1>
-              <button class="closeButton text-xl hover:text-red-500">
+              <h1 class="text-lg font-semibold mb-4">CATEGORIAS</h1>
+              <button class="closeButton text-xl hover:text-blue-600">
                 <ion-icon name="close-circle-outline"></ion-icon>
               </button>
             </div>
@@ -665,7 +610,7 @@
                     <span>30</span>
                   </div>
                   <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">VTodo en rejas</a>
+                    <a href="#">Todo en rejas</a>
                     <span>120</span>
                   </div>
                   <summary>
@@ -761,7 +706,7 @@
                   </h4>
                   <h4>Clothes</h4>
                   <div class="flex items-center justify-start gap-4">
-                    <strong class="text-red-400">$7.00</strong>
+                    <strong class="text-blue-600">$7.00</strong>
                     <s class="text-gray-500">$14.00</s>
                   </div>
                 </div>
@@ -783,7 +728,7 @@
                   </h4>
                   <h4>Clothes</h4>
                   <div class="flex items-center justify-start gap-4">
-                    <strong class="text-red-400">$21.00</strong>
+                    <strong class="text-blue-600">$21.00</strong>
                     <s class="text-gray-500">$24.00</s>
                   </div>
                 </div>
@@ -804,7 +749,7 @@
                   </h4>
                   <h4>Clothes</h4>
                   <div class="flex items-center justify-start gap-4">
-                    <strong class="text-red-400">$5.00</strong>
+                    <strong class="text-blue-600">$5.00</strong>
                     <s class="text-gray-500">$15.00</s>
                   </div>
                 </div>
@@ -825,7 +770,7 @@
                   </h4>
                   <h4>Mens Fashion</h4>
                   <div class="flex items-center justify-start gap-4">
-                    <strong class="text-red-400">$30.00</strong>
+                    <strong class="text-blue-600">$30.00</strong>
                     <s class="text-gray-500">$40.00</s>
                   </div>
                 </div>
@@ -849,7 +794,7 @@
                   </h4>
                   <h4>Sports</h4>
                   <div class="flex items-center justify-start gap-4">
-                    <strong class="text-red-400">$82.00</strong>
+                    <strong class="text-blue-600">$82.00</strong>
                     <s class="text-gray-500">$101.00</s>
                   </div>
                 </div>
@@ -870,7 +815,7 @@
                   </h4>
                   <h4>Sports</h4>
                   <div class="flex items-center justify-start gap-4">
-                    <strong class="text-red-400">$78.00</strong>
+                    <strong class="text-blue-600">$78.00</strong>
                     <s class="text-gray-500">$93.00</s>
                   </div>
                 </div>
@@ -891,7 +836,7 @@
                   </h4>
                   <h4>Party Wear</h4>
                   <div class="flex items-center justify-start gap-4">
-                    <strong class="text-red-400">$27.00</strong>
+                    <strong class="text-blue-600">$27.00</strong>
                     <s class="text-gray-500">$32.00</s>
                   </div>
                 </div>
@@ -912,7 +857,7 @@
                   </h4>
                   <h4>Sports</h4>
                   <div class="flex items-center justify-start gap-4">
-                    <strong class="text-red-400">$12.00</strong>
+                    <strong class="text-blue-600">$12.00</strong>
                     <s class="text-gray-500">$24.00</s>
                   </div>
                 </div>
@@ -936,7 +881,7 @@
                   </h4>
                   <h4>Watches</h4>
                   <div class="flex items-center justify-start gap-4">
-                    <strong class="text-red-400">$32.00</strong>
+                    <strong class="text-blue-600">$32.00</strong>
                     <s class="text-gray-500">$53.00</s>
                   </div>
                 </div>
@@ -957,7 +902,7 @@
                   </h4>
                   <h4>Jewellery</h4>
                   <div class="flex items-center justify-start gap-4">
-                    <strong class="text-red-400">$12.00</strong>
+                    <strong class="text-blue-600">$12.00</strong>
                     <s class="text-gray-500">$32.00</s>
                   </div>
                 </div>
@@ -978,7 +923,7 @@
                   </h4>
                   <h4>Perfume</h4>
                   <div class="flex items-center justify-start gap-4">
-                    <strong class="text-red-400">$74.00</strong>
+                    <strong class="text-blue-600">$74.00</strong>
                     <s class="text-gray-500">$104.00</s>
                   </div>
                 </div>
@@ -999,7 +944,7 @@
                   </h4>
                   <h4>Belt</h4>
                   <div class="flex items-center justify-start gap-4">
-                    <strong class="text-red-400">$17.00</strong>
+                    <strong class="text-blue-600">$17.00</strong>
                     <s class="text-gray-500">$23.00</s>
                   </div>
                 </div>
@@ -1072,7 +1017,7 @@
             <div
               class="w-1/2 lg:w-full flex justify-center lg:justify-between items-center gap-2"
             >
-              <ion-icon class="text-red-500 text-4xl" name="call-outline"></ion-icon>
+              <ion-icon class="text-blue-600 text-4xl" name="call-outline"></ion-icon>
               <div>
                 <h3 class="font-semibold text-gray-700">+54 9 336 407-2597</h3>
                 <p class="text-xs text-gray-600">Diego Toloza</p>
@@ -1083,7 +1028,7 @@
               class="w-1/2 lg:w-full flex justify-center lg:justify-between items-center gap-2"
             >
               <ion-icon
-                class="text-red-500 text-4xl"
+                class="text-blue-600 text-4xl"
                 name="logo-whatsapp"
               ></ion-icon>
               <div>
@@ -1095,7 +1040,7 @@
             <div
               class="w-1/2 lg:w-full flex justify-center lg:justify-between items-center gap-2"
             >
-              <ion-icon class="text-red-500 text-4xl" name="logo-instagram"></ion-icon>
+              <ion-icon class="text-blue-600 text-4xl" name="logo-instagram"></ion-icon>
               <div>
                 <h3 class="font-semibold text-gray-700">Aberturas Fuerte Hogar</h3>
                 <p class="text-xs text-gray-600">@aberturasfuertehogar</p>
@@ -1106,7 +1051,7 @@
               class="w-1/2 lg:w-full flex justify-center lg:justify-between items-center gap-2"
             >
               <ion-icon
-                class="text-red-500 text-4xl"
+                class="text-blue-600 text-4xl"
                 name="location-outline"
               ></ion-icon>
               <div>
