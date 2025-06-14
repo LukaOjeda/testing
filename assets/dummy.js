@@ -1,23 +1,38 @@
-export const swiperData = [
-  {
-    avatar: "./assets/images/banner-1.jpg",
+document.addEventListener("DOMContentLoaded", () => {
+  // Función para cargar la base de datos automáticamente
+  fetch("./database/database.db")
+    .then((res) => res.arrayBuffer())
+    .then((buf) =>
+      initSqlJs({
+        locateFile: (filename) =>
+          `https://cdn.jsdelivr.net/npm/sql.js/dist/${filename}`,
+      }).then((SQL) => {
+        const db = new SQL.Database(new Uint8Array(buf));
+        const present = db.exec("SELECT present FROM products;");
+
+        // Mostrar los valores en la página
+        // Asegúrate de que 'present[0].values' tenga datos
+        console.log(present[0].values[0][0]);
+        db.close();
+      })
+    )
+    .catch((e) => {
+      console.log(e);
+    });
+});
+
+const swiperData = [];
+
+for (let i = 1; i <= 3; i++) {
+  swiperData.push({
+    avatar: `./assets/images/banner-${i}.jpg`,
     title: "Aberturas Fuerte Hogar",
     info: "Los mejores precios los encontrás acá",
     price: "starting at $ 20.00",
-  },
-  {
-    avatar: "./assets/images/banner-2.jpg",
-    title: "Aberturas Fuerte Hogar",
-    info: "Animate al cambio",
-    price: "starting at $ 15.00",
-  },
-  {
-    avatar: "./assets/images/banner-3.jpg",
-    title: "Aberturas Fuerte Hogar",
-    info: "La mejor calidad con nosotros",
-    price: "starting at $ 29.99",
-  },
-];
+  });
+}
+
+export { swiperData };
 
 export const TitleCategories = [
   {
@@ -84,7 +99,23 @@ export const BolgSwiper = [
   },
 ];
 
-export const NewProducts = [
+const NewProducts = [];
+
+for (let i = 1; i <= 12; i++) {
+  NewProducts.push({
+    present: `hola`,
+    productPic: "./assets/images/products/shoe-1.jpg",
+    productHover: "./assets/images/products/shoe-1.jpg",
+    productName: "SHORTS",
+    productInfo: "Better Basics French Terry Sweatshorts",
+    productPrice: "$48.00",
+    taxPrice: "$75.00",
+  });
+}
+
+export { NewProducts };
+
+/*export const NewProducts = [
   {
     present: "15%",
     productPic: "./assets/images/products/shoe-1.jpg",
@@ -193,4 +224,4 @@ export const NewProducts = [
     productPrice: "$48.00",
     taxPrice: "$75.00",
   },
-];
+];*/
