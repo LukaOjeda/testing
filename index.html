@@ -5,11 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--* favicon -->
-    <link
-      rel="shortcut icon"
-      href="./assets/images/logo/favicon.ico"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="./assets/images/logo/favicon.ico" type="image/x-icon" />
     <!--! css link -->
     <link rel="stylesheet" href="./assets/style.css" />
     <!--? swiperjs cdn link -->
@@ -27,13 +23,11 @@
         },
       };
     </script>
-    
+
     <title>Fuerte Hogar</title>
   </head>
   <body>
-      <button
-        class="closeButton absolute top-4 right-4 text-2xl hover:text-blue-600">
-      </button>
+    <button class="closeButton absolute top-4 right-4 text-2xl hover:text-blue-600"></button>
 
     <header class="header w-full">
       <!--! topHeader -->
@@ -88,126 +82,6 @@
           </div>
         </div>
       </div>
-      <!--! topHeader -->
-      <!--? navbar -->
-      <!--todo desktop Navbar -->
-      <div class="desktopNavbar">
-        <nav class="my-4 hidden lg:flex justify-center">
-          <ul
-            class="desktopNavbarUl flex justify-center items-center gap-12 font-sm font-bold text-gray-600"
-          >
-            <li class="nav_items relative">
-              <a href="#Home">INICIO</a>
-              <span
-                class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all ease-in-out"
-              ></span>
-            </li>
-              <!--? hoverItems -->
-            </li>
-            <li class="nav_items relative men_nav_item">
-              <a href="#Men">PUERTAS</a>
-              <span
-                class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all ease-in-out"
-              ></span>
-              <!--? hoverItems -->
-              <ul
-                class="hoveredItems w-52 absolute top-10 hidden flex-col items-start justify-start gap-2 p-4 rounded-xl shadow-lg border font-normal bg-white"
-              >
-                <li>
-                  <a href="#">• PLACAS DE INTERIOR</a>
-                </li>
-                <li>
-                  <a href="#">• PUERTAS DE ALUMINIO</a>
-                </li>
-                <li>
-                  <a href="#">• PUERTAS DE CHAPA</a>
-                </li>
-                <li>
-                  <a href="#">• REJAS</a>
-                </li>
-                <li>
-                  <a href="#">• TODO EN PUERTAS</a>
-                </li>
-              </ul>
-              <!--? hoverItems -->
-            </li>
-            <li class="nav_items relative women_nav_item">
-              <a href="#Women">VENTANAS</a>
-              <span
-                class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all ease-in-out"
-              ></span>
-              <!--? hoverItems -->
-              <ul
-                class="hoveredItems w-52 absolute top-10 hidden flex-col items-start justify-start gap-2 p-4 rounded-xl shadow-lg border font-normal bg-white"
-              >
-                <li>
-                  <a href="#">• AIREADORES</a>
-                </li>
-                <li>
-                  <a href="#">• VENTANAS CORREDIZAS</a>
-                </li>
-                <li>
-                  <a href="#">• REJAS</a>
-                </li>
-                <li>
-                  <a href="#">• MOSQUITEROS</a>
-                </li>
-                <li>
-                  <a href="#">• TODO EN VENTANAS</a>
-                </li>
-              </ul>
-              <!--? hoverItems -->
-            </li>
-            <li class="nav_items relative jewelry_nav_item">
-              <a href="#Jewelry">PORTONES</a>
-              <span
-                class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all ease-in-out"
-              ></span>
-              <!--? hoverItems -->
-              <ul
-                class="hoveredItems w-52 absolute top-10 hidden flex-col items-start justify-start gap-2 p-4 rounded-xl shadow-lg border font-normal bg-white"
-              >
-                <li>
-                  <a href="#">x</a>
-                </li>
-                <li>
-                  <a href="#">x</a>
-                </li>
-                <li>
-                  <a href="#">x</a>
-                </li>
-                <li>
-                  <a href="#">x</a>
-                </li>
-              </ul>
-              <!--? hoverItems -->
-            </li>
-            <li class="nav_items relative perfume_nav_item">
-              <a href="#Perfume">NOSOTROS</a>
-              <span
-                class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all ease-in-out"
-              ></span>
-              <!--? hoverItems -->
-              <ul
-                class="hoveredItems w-52 absolute top-10 hidden flex-col items-start justify-start gap-2 p-4 rounded-xl shadow-lg border font-normal bg-white"
-              >
-              <!--? hoverItems -->
-            </li>
-            <li class="nav_items relative">
-              <a href="#Blog">x</a>
-              <span
-                class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all ease-in-out"
-              ></span>
-            </li>
-            <li class="nav_items relative">
-              <a href="#HotOffers">X</a>
-              <span
-                class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all ease-in-out"
-              ></span>
-            </li>
-          </ul>
-        </nav>
-      </div>
 
       <!--? mobile Navbar -->
       <div class="mobileNavbar">
@@ -220,9 +94,11 @@
             <ion-icon name="menu-outline"></ion-icon>
           </button>
 
-          <button type="button">
+          <a href="index.html">
+            <button type="button">
             <ion-icon name="home-outline"></ion-icon>
           </button>
+          </a>
 
           <button id="categoriesBtn" type="button">
             <ion-icon name="grid-outline"></ion-icon>
@@ -245,45 +121,33 @@
               <ion-icon name="close-circle-outline"></ion-icon>
             </button>
           </div>
-          <div class="mobile_navbar_item border-b pb-3 text-gray-600"> INICIO </div>
+          <div class="mobile_navbar_item border-b pb-3 text-gray-600"> Categorías </div>
           <div class="mobile_navbar_item border-b pb-3 text-gray-600">
             <details>
-              <a href="#">Interior</a>
-              <a href="#">Aluminio</a>
-              <a href="#">Chapa</a>
-              <a href="#">Mosquitero</a>
-              <a href="#">Todo en puertas</a>
+              <a href="javascript:mostrarTipo('interior')">Interior</a>
+              <a href="javascript:mostrarTipo('aluminio')">Aluminio</a>
+              <a href="javascript:mostrarTipo('chapa')">Chapa</a>
+              <a href="javascript:mostrarTipo('mosquitero')">Mosquitero</a>
+              <a href="javascript:mostrarCategoria('puertas')">Todo en puertas</a>
               <summary> Puertas </summary>
             </details>
           </div>
           <div class="mobile_navbar_item border-b pb-3 text-gray-600">
             <details>
-              <a href="#">Aireadores</a>
-              <a href="#">Corredizas</a>
-              <a href="#">Mosquitero</a>
-              <a href="#">Todo en ventanas</a>
+              <a href="javascript:mostrarTipo('aireador')">Aireadores</a>
+              <a href="javascript:mostrarTipo('bisagra')">Ventanas de bisabra</a>
+              <a href="javascript:mostrarTipo('corrediza')">Ventanas corredizas</a>
+              <a href="javascript:mostrarTipo('reja')">Rejas</a>
+              <a href="javascript:mostrarTipo('mosquitero')">Mosquiteros</a>
+              <a href="javascript:mostrarCategoria('ventanas')">Todo en ventanas</a>
               <summary> Ventanas </summary>
             </details>
           </div>
           <div class="mobile_navbar_item border-b pb-3 text-gray-600">
             <details>
-              <a href="#">Puertas</a>
-              <a href="#">Ventanas</a>
-              <a href="#">Todo en rejas</a>
-              <summary> Rejas </summary>
-            </details>
-          </div>
-          <div class="mobile_navbar_item border-b pb-3 text-gray-600">
-            <details>
-              <a href="#">Todo en portones</a>
+              <a href="javascript:mostrarCategoria('poertones')">Todo en portones</a>
               <summary> Portones </summary>
             </details>
-          </div>
-          <div class="mobile_navbar_item border-b pb-3 text-gray-600">
-            <a href="#"> Nosotros </a>
-          </div>
-
-          <div class="mobile_navbar_item border-b pb-3 text-gray-600">
           </div>
 
           <div class="icons flex items-center justify-center gap-4">
@@ -297,13 +161,7 @@
               class="text-gray-900 bg-gray-300/50 p-2 rounded-md hover:scale-110 hover:text-white hover:bg-blue-600 flex items-center justify-center"
               href="#"
             >
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-            <a
-              class="text-gray-900 bg-gray-300/50 p-2 rounded-md hover:scale-110 hover:text-white hover:bg-blue-600 flex items-center justify-center"
-              href="#"
-            >
-              <ion-icon name="logo-github"></ion-icon>
+              <ion-icon name="logo-whatsapp"></ion-icon>
             </a>
           </div>
         </div>
@@ -312,10 +170,10 @@
         <div
           id="sidebarCategories"
           class="fixed top-0 w-80 h-screen bg-white p-6 shadow-lg hidden flex-col justify-start gap-4 font-semibold overflow-auto z-20"
-        >
-          <div class="categories w-full h-auto">
+          >
+            <div class="categories w-full h-auto">
             <div class="w-full flex items-center justify-between">
-              <h1 class="text-lg font-semibold mb-4">CATEGORIAS</h1>
+              <h1 class="text-lg font-semibold mb-4">Últimos Productos</h1>
               <button class="closeButton text-xl hover:text-blue-600">
                 <ion-icon name="close-circle-outline"></ion-icon>
               </button>
@@ -323,127 +181,10 @@
             <div class="border-b pb-3 text-lg text-gray-600">
 
             </div>
-            <div class="border-b pb-3 text-lg text-gray-600">
-              <details>
-                <div class="flex justify-between items-baseline text-sm">
-                  <a href="#">Sports</a>
-                  <span>300</span>
-                </div>
-                <div class="flex justify-between items-baseline text-sm">
-                  <a href="#">Formal</a>
-                  <span>30</span>
-                </div>
-                <div class="flex justify-between items-baseline text-sm">
-                  <a href="#">Casual</a>
-                  <span>50</span>
-                </div>
-                <div class="flex justify-between items-baseline text-sm">
-                  <a href="#">Safety Shoes</a>
-                  <span>120</span>
-                </div>
-                <summary>
-                  <div class="flex items-center gap-2">
-                    Puertas
-                    <img
-                      class="w-4 h-4"
-                      src="./assets/images/icons/door1.png"
-                      alt="productPicture"
-                    />
-                  </div>
-                </summary>
-              </details>
-            </div>
-            <div class="border-b pb-3 text-lg text-gray-600">
-              <details>
-                <div class="flex justify-between items-baseline text-sm">
-                  <a href="#">Earrings</a>
-                  <span>300</span>
-                </div>
-                <div class="flex justify-between items-baseline text-sm">
-                  <a href="#">Couple Rings</a>
-                  <span>30</span>
-                </div>
-                <div class="flex justify-between items-baseline text-sm">
-                  <a href="#">Necklace</a>
-                  <span>50</span>
-                </div>
-                <summary>
-                  <div class="flex items-center gap-2">
-                    Ventanas
-                    <img
-                      class="w-4 h-4"
-                      src="./assets/images/icons/window.png"
-                      alt="productPicture"
-                    />
-                  </div>
-                </summary>
-              </details>
-            </div>
-            <div class="border-b pb-3 text-lg text-gray-600">
-              <details>
-                <div class="flex justify-between items-baseline text-sm">
-                  <a href="#">Clothes Perfume</a>
-                  <span>300</span>
-                </div>
-                <div class="flex justify-between items-baseline text-sm">
-                  <a href="#">Deodorant</a>
-                  <span>30</span>
-                </div>
-                <div class="flex justify-between items-baseline text-sm">
-                  <a href="#">Jacket</a>
-                  <span>50</span>
-                </div>
-                <div class="flex justify-between items-baseline text-sm">
-                  <a href="#">Dress & Frock</a>
-                  <span>120</span>
-                </div>
-                <summary>
-                  <div class="flex items-center gap-2">
-                    Rejas
-                    <img
-                      class="w-4 h-4"
-                      src="./assets/images/icons/ironFence.png"
-                      alt="productPicture"
-                    />
-                  </div>
-                </summary>
-              </details>
-            </div>
-            <div class="border-b pb-3 text-lg text-gray-600">
-              <details>
-                <div class="flex justify-between items-baseline text-sm">
-                  <a href="#">Shampoo</a>
-                  <span>300</span>
-                </div>
-                <div class="flex justify-between items-baseline text-sm">
-                  <a href="#">Sunscreen</a>
-                  <span>30</span>
-                </div>
-                <div class="flex justify-between items-baseline text-sm">
-                  <a href="#">Body Wash</a>
-                  <span>50</span>
-                </div>
-                <div class="flex justify-between items-baseline text-sm">
-                  <a href="#">Makeup Kit</a>
-                  <span>120</span>
-                </div>
-                <summary>
-                  <div class="flex items-center gap-2">
-                    Portones
-                    <img
-                      class="w-4 h-4"
-                      src="./assets/images/icons/bigDoor¿.png"
-                      alt="productPicture"
-                    />
-                  </div>
-                </summary>
-              </details>
-            </div>
-          </div>
 
           <div
             class="bestsellers w-full h-auto mt-2 flex flex-col items-start justify-start gap-4"
-          >
+           >
             <h2 class="text-lg font-semibold">LO MÁS VENDIDO</h2>
             <div class="flex items-center justify-start gap-2">
               <div class="w-20 h-20 p-2 border shadow-lg bg-gray-300/20 rounded-md">
@@ -510,14 +251,12 @@
       </div>
       <!--? Navbar -->
     </header>
+
     <main>
       <!-- !banner -->
       <div class="banner mt-10 lg:-mt-4 flex items-center justify-center">
         <div class="swiper swiper-js">
-          <div
-            class="swiper-wrapper h-64 lg:h-96 w-full lg:w-5/6 relative"
-            id="swiperSlide"
-          ></div>
+          <div class="swiper-wrapper h-64 lg:h-96 w-full lg:w-5/6 relative" id="swiperSlide"></div>
 
           <div class="swiper-scrollbar"></div>
         </div>
@@ -532,9 +271,7 @@
       </div>
 
       <!--? Products and categories  -->
-      <section
-        class="w-full min-h-auto px-8 lg:px-0 lg:w-5/6 mx-auto mt-16 flex gap-8"
-      >
+      <section class="w-full min-h-auto px-8 lg:px-0 lg:w-5/6 mx-auto mt-16 flex gap-8">
         <aside class="sticky top-0 hidden lg:flex flex-col lg:w-1/4 max-h-screen">
           <div class="aside_section overflow-y-auto">
             <div class="categories w-full rounded-xl p-4 bg-white border shadow-lg">
@@ -542,29 +279,41 @@
               <div class="border-b pb-3 text-lg text-gray-600">
                 <details>
                   <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Aluminio</a>
+                    <a href="javascript:mostrarTipo('interior')">Interiores</a>
                     <span>300</span>
                   </div>
                   <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Chapa</a>
+                    <a href="javascript:mostrarTipo('aluminio')">Aluminio</a>
                     <span>30</span>
                   </div>
                   <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Interior</a>
+                    <a href="javascript:mostrarTipo('chapa')">Chapa</a>
                     <span>50</span>
                   </div>
                   <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Todo en puertas</a>
+                    <a href="javascript:mostrarTipo('doble')">Puertas dobles</a>
+                    <span>50</span>
+                  </div>
+                  <div class="flex justify-between items-baseline text-sm">
+                    <a href="javascript:mostrarTipo('media')">Puertas medias</a>
+                    <span>50</span>
+                  </div>
+                  <div class="flex justify-between items-baseline text-sm">
+                    <a href="javascript:mostrarTipo('reja')">Rejas</a>
+                    <span>50</span>
+                  </div>
+                  <div class="flex justify-between items-baseline text-sm">
+                    <a href="javascript:mostrarTipo('mosquitero')">Mosquiteros</a>
+                    <span>50</span>
+                  </div>
+                  <div class="flex justify-between items-baseline text-sm">
+                    <a href="javascript:mostrarCategoria('puertas')">Todo en puertas</a>
                     <span>120</span>
                   </div>
                   <summary>
                     <div class="flex items-center gap-2">
                       Puertas
-                      <img
-                        class="w-4 h-4"
-                        src="./assets/images/icons/door1.png"
-                        alt="productPicture"
-                      />
+                      <img class="w-4 h-4" src="./assets/images/icons/door1.png" alt="productPicture" />
                     </div>
                   </summary>
                 </details>
@@ -572,29 +321,33 @@
               <div class="border-b pb-3 text-lg text-gray-600">
                 <details>
                   <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Aireadores</a>
+                    <a href="javascript:mostrarTipo('aireador')">Aireadores</a>
                     <span>300</span>
                   </div>
                   <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Ventanas de bisagra</a>
+                    <a href="javascript:mostrarTipo('bisagra')">Ventanas de bisagra</a>
                     <span>30</span>
                   </div>
                   <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Ventanas corredizas</a>
+                    <a href="javascript:mostrarTipo('corrediza')">Ventanas corredizas</a>
                     <span>50</span>
                   </div>
                   <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Todo en puertas</a>
+                    <a href="javascript:mostrarTipo('reja')">Rejas</a>
+                    <span>50</span>
+                  </div>
+                  <div class="flex justify-between items-baseline text-sm">
+                    <a href="javascript:mostrarTipo('mosquitero')">Mosquiteros</a>
+                    <span>50</span>
+                  </div>
+                  <div class="flex justify-between items-baseline text-sm">
+                    <a href="javascript:mostrarCategoria('ventanas')">Todo en ventanas</a>
                     <span>120</span>
                   </div>
                   <summary>
                     <div class="flex items-center gap-2">
                       Ventanas
-                      <img
-                        class="w-4 h-4"
-                        src="./assets/images/icons/window.png"
-                        alt="productPicture"
-                      />
+                      <img class="w-4 h-4" src="./assets/images/icons/window.png" alt="productPicture" />
                     </div>
                   </summary>
                 </details>
@@ -602,407 +355,53 @@
               <div class="border-b pb-3 text-lg text-gray-600">
                 <details>
                   <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Rejas para puertas</a>
+                    <a href="javascript:mostrarCategoria('portones')">Todo en portones</a>
                     <span>300</span>
-                  </div>
-                  <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Rejas para ventanas</a>
-                    <span>30</span>
-                  </div>
-                  <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Todo en rejas</a>
-                    <span>120</span>
-                  </div>
-                  <summary>
-                    <div class="flex items-center gap-2">
-                      Rejas
-                      <img
-                        class="w-4 h-4"
-                        src="./assets/images/icons/ironFence.png"
-                        alt="productPicture"
-                      />
-                    </div>
-                  </summary>
-                </details>
-              </div>
-              <div class="border-b pb-3 text-lg text-gray-600">
-                <details>
-                  <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Earrings</a>
-                    <span>300</span>
-                  </div>
-                  <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Couple Rings</a>
-                    <span>30</span>
-                  </div>
-                  <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Necklace</a>
-                    <span>50</span>
-                  </div>
-                  <summary>
-                    <div class="flex items-center gap-2">
-                      Mosquiteros
-                      <img
-                        class="w-4 h-4"
-                        src="./assets/images/icons/ironFence.png"
-                        alt="productPicture"
-                      />
-                    </div>
-                  </summary>
-                </details>
-              </div>
-              <div class="border-b pb-3 text-lg text-gray-600">
-                <details>
-                  <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Clothes Perfume</a>
-                    <span>300</span>
-                  </div>
-                  <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Deodorant</a>
-                    <span>30</span>
-                  </div>
-                  <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Jacket</a>
-                    <span>50</span>
-                  </div>
-                  <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Dress & Frock</a>
-                    <span>120</span>
                   </div>
                   <summary>
                     <div class="flex items-center gap-2">
                       Portones
-                      <img
-                        class="w-4 h-4"
-                        src="./assets/images/icons/bigDoor¿.png"
-                        alt="productPicture"
-                      />
+                      <img class="w-4 h-4" src="./assets/images/icons/bigDoor¿.png" alt="productPicture" />
                     </div>
                   </summary>
-                
+                </details>
               </div>
-            </div>
-
-        </aside>
-
-        <div class="products w-full lg:w-3/4 flex flex-col">
-          <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <div class="NewArrivals flex flex-col gap-4">
-              <h1 class="text-xl font-semibold border-b pb-4">New Arrivals</h1>
-
-              <div
-                class="w-full h-28 bg-white border shadow-sm rounded-lg flex items-center justify-start gap-2 cursor-pointer"
-              >
-                <div class="w-20 h-20 p-2">
-                  <img
-                    class="w-full h-full"
-                    src="./assets/images/products/clothes-1.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="text-gray-700">
-                  <h4 class="font-bold text-gray-900 text-sm text-sm">
-                    Relaxed Short Full...
-                  </h4>
-                  <h4>Clothes</h4>
-                  <div class="flex items-center justify-start gap-4">
-                    <strong class="text-blue-600">$7.00</strong>
-                    <s class="text-gray-500">$14.00</s>
+              <div class="border-b pb-3 text-lg text-gray-600">
+                  <div class="flex items-center gap-2">
+                    <img class="w-4 h-4" src="./assets/images/icons/window.png" alt="productPicture" />
+                    <a href="javascript:mostrarCategoria('todos')">Todas las aberturas</a>
                   </div>
-                </div>
-              </div>
-
-              <div
-                class="w-full h-28 bg-white border shadow-sm rounded-lg flex items-center justify-start gap-2 cursor-pointer"
-              >
-                <div class="w-20 h-20 p-2">
-                  <img
-                    class="w-full h-full"
-                    src="./assets/images/products/clothes-1.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="text-gray-700">
-                  <h4 class="font-bold text-gray-900 text-sm text-sm">
-                    Girls Pnk Embro Desi...
-                  </h4>
-                  <h4>Clothes</h4>
-                  <div class="flex items-center justify-start gap-4">
-                    <strong class="text-blue-600">$21.00</strong>
-                    <s class="text-gray-500">$24.00</s>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="w-full h-28 bg-white border shadow-sm rounded-lg flex items-center justify-start gap-2 cursor-pointer"
-              >
-                <div class="w-20 h-20 p-2">
-                  <img
-                    class="w-full h-full"
-                    src="./assets/images/products/clothes-1.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="text-gray-700">
-                  <h4 class="font-bold text-gray-900 text-sm text-sm">
-                    Black Floral Wrap...
-                  </h4>
-                  <h4>Clothes</h4>
-                  <div class="flex items-center justify-start gap-4">
-                    <strong class="text-blue-600">$5.00</strong>
-                    <s class="text-gray-500">$15.00</s>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="w-full h-28 bg-white border shadow-sm rounded-lg flex items-center justify-start gap-2 cursor-pointer"
-              >
-                <div class="w-20 h-20 p-2">
-                  <img
-                    class="w-full h-full"
-                    src="./assets/images/products/clothes-1.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="text-gray-700">
-                  <h4 class="font-bold text-gray-900 text-sm text-sm">
-                    Pure Garment Dye...
-                  </h4>
-                  <h4>Mens Fashion</h4>
-                  <div class="flex items-center justify-start gap-4">
-                    <strong class="text-blue-600">$30.00</strong>
-                    <s class="text-gray-500">$40.00</s>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="Trending flex flex-col gap-4">
-              <h1 class="text-xl font-semibold border-b pb-4">Trending</h1>
-              <div
-                class="w-full h-28 bg-white border shadow-sm rounded-lg flex items-center justify-start gap-2 cursor-pointer"
-              >
-                <div class="w-20 h-20 p-2">
-                  <img
-                    class="w-full h-full"
-                    src="./assets/images/products/clothes-1.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="text-gray-700">
-                  <h4 class="font-bold text-gray-900 text-sm text-sm">
-                    Running & Trekking...
-                  </h4>
-                  <h4>Sports</h4>
-                  <div class="flex items-center justify-start gap-4">
-                    <strong class="text-blue-600">$82.00</strong>
-                    <s class="text-gray-500">$101.00</s>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="w-full h-28 bg-white border shadow-sm rounded-lg flex items-center justify-start gap-2 cursor-pointer"
-              >
-                <div class="w-20 h-20 p-2">
-                  <img
-                    class="w-full h-full"
-                    src="./assets/images/products/clothes-1.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="text-gray-700">
-                  <h4 class="font-bold text-gray-900 text-sm">
-                    Trekking & Running...
-                  </h4>
-                  <h4>Sports</h4>
-                  <div class="flex items-center justify-start gap-4">
-                    <strong class="text-blue-600">$78.00</strong>
-                    <s class="text-gray-500">$93.00</s>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="w-full h-28 bg-white border shadow-sm rounded-lg flex items-center justify-start gap-2 cursor-pointer"
-              >
-                <div class="w-20 h-20 p-2">
-                  <img
-                    class="w-full h-full"
-                    src="./assets/images/products/clothes-1.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="text-gray-700">
-                  <h4 class="font-bold text-gray-900 text-sm">
-                    Womens Party Wea...
-                  </h4>
-                  <h4>Party Wear</h4>
-                  <div class="flex items-center justify-start gap-4">
-                    <strong class="text-blue-600">$27.00</strong>
-                    <s class="text-gray-500">$32.00</s>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="w-full h-28 bg-white border shadow-sm rounded-lg flex items-center justify-start gap-2 cursor-pointer"
-              >
-                <div class="w-20 h-20 p-2">
-                  <img
-                    class="w-full h-full"
-                    src="./assets/images/products/clothes-1.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="text-gray-700">
-                  <h4 class="font-bold text-gray-900 text-sm">
-                    Sports Claw Women...
-                  </h4>
-                  <h4>Sports</h4>
-                  <div class="flex items-center justify-start gap-4">
-                    <strong class="text-blue-600">$12.00</strong>
-                    <s class="text-gray-500">$24.00</s>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="TopRated flex flex-col gap-4">
-              <h1 class="text-xl font-semibold border-b pb-4">Top Rated</h1>
-              <div
-                class="w-full h-28 bg-white border shadow-sm rounded-lg flex items-center justify-start gap-2 cursor-pointer"
-              >
-                <div class="w-20 h-20 p-2">
-                  <img
-                    class="w-full h-full"
-                    src="./assets/images/products/clothes-1.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="text-gray-700">
-                  <h4 class="font-bold text-gray-900 text-sm">
-                    Pocket Watch Leather...
-                  </h4>
-                  <h4>Watches</h4>
-                  <div class="flex items-center justify-start gap-4">
-                    <strong class="text-blue-600">$32.00</strong>
-                    <s class="text-gray-500">$53.00</s>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="w-full h-28 bg-white border shadow-sm rounded-lg flex items-center justify-start gap-2 cursor-pointer"
-              >
-                <div class="w-20 h-20 p-2">
-                  <img
-                    class="w-full h-full"
-                    src="./assets/images/products/clothes-1.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="text-gray-700">
-                  <h4 class="font-bold text-gray-900 text-sm">
-                    Silver Deer Heart Neck...
-                  </h4>
-                  <h4>Jewellery</h4>
-                  <div class="flex items-center justify-start gap-4">
-                    <strong class="text-blue-600">$12.00</strong>
-                    <s class="text-gray-500">$32.00</s>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="w-full h-28 bg-white border shadow-sm rounded-lg flex items-center justify-start gap-2 cursor-pointer"
-              >
-                <div class="w-20 h-20 p-2">
-                  <img
-                    class="w-full h-full"
-                    src="./assets/images/products/clothes-1.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="text-gray-700">
-                  <h4 class="font-bold text-gray-900 text-sm">
-                    Titan 100 Ml Womens
-                  </h4>
-                  <h4>Perfume</h4>
-                  <div class="flex items-center justify-start gap-4">
-                    <strong class="text-blue-600">$74.00</strong>
-                    <s class="text-gray-500">$104.00</s>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="w-full h-28 bg-white border shadow-sm rounded-lg flex items-center justify-start gap-2 cursor-pointer"
-              >
-                <div class="w-20 h-20 p-2">
-                  <img
-                    class="w-full h-full"
-                    src="./assets/images/products/clothes-1.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="text-gray-700">
-                  <h4 class="font-bold text-gray-900 text-sm">
-                    Men's Leather Rever...
-                  </h4>
-                  <h4>Belt</h4>
-                  <div class="flex items-center justify-start gap-4">
-                    <strong class="text-blue-600">$17.00</strong>
-                    <s class="text-gray-500">$23.00</s>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
+        </aside>
+
+        <div class="products w-full lg:w-3/4 flex flex-col">
+          
 
           <div class="newProductsContainer">
             <h1 class="font-semibold text-xl border-b py-4">Todas las Aberturas</h1>
-            <div
-              id="newProducts"
-              class="newProducts grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
-            ></div>
+            <div id="newProducts" class="newProducts grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"></div>
           </div>
         </div>
       </section>
 
-      <div
-        class="mt-10 w-full px-8 lg:px-0 lg:w-5/6 mx-auto flex flex-wrap lg:flex-nowrap flex-col lg:flex-row gap-8 mb-20"
-      >
+      <div class="mt-10 w-full px-8 lg:px-0 lg:w-5/6 mx-auto flex flex-wrap lg:flex-nowrap flex-col lg:flex-row gap-8 mb-20">
         <div class="testimonial w-full lg:w-2/6">
           <h1 class="text-xl font-semibold border-b pb-4 mb-8">Sobre nosotros</h1>
-          <div
-            style="height: 23rem"
-            class="w-full border rounded-xl flex flex-col items-center justify-center p-4"
-          >
-            <img
-              class="w-20 h-20 rounded-full"
-              src="./assets/images/testimonial-1.jpg"
-              alt="nosotros"
-            />
+          <div style="height: 23rem" class="w-full border rounded-xl flex flex-col items-center justify-center p-4">
+            <img class="w-20 h-20 rounded-full" src="./assets/images/testimonial-1.jpg" alt="nosotros" />
             <h2 class="text-lg font-bold text-gray-600">Diego Toloza</h2>
             <h5 class="text-md">Dueño de Aberturas Fuerte Hogar</h5>
-            <img
-              class="w-6 h-6 my-4"
-              src="./assets/images/icons/quotes.svg"
-              alt="quotes"
-            />
-            <p class="text-sm w-4/5 mx-auto text-center">
-              Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor dolor sit
-              amet.
-            </p>
+            <img class="w-6 h-6 my-4" src="./assets/images/icons/quotes.svg" alt="quotes" />
+            <p class="text-sm w-4/5 mx-auto text-center">Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor dolor sit amet.</p>
           </div>
         </div>
 
-        <div
-          class="w-full lg:w-3/6 rounded-lg flex items-center justify-center"
-          style="background-image: url('./assets/images/cta-banner.jpg')"
-        >
-          <div
-            class="flex flex-col items-center justify-center p-8 gap-4 bg-gray-100/70 rounded-lg w-3/4"
-          >
-            <button class="bg-gray-900 text-white p-2 rounded-lg">
-              25% DISCOUNT
-            </button>
-            <h1 class="w-56 text-4xl font-bold text-center text-gray-800">
-              Summer Collection
-            </h1>
+        <div class="w-full lg:w-3/6 rounded-lg flex items-center justify-center" style="background-image: url('./assets/images/cta-banner.jpg')">
+          <div class="flex flex-col items-center justify-center p-8 gap-4 bg-gray-100/70 rounded-lg w-3/4">
+            <button class="bg-gray-900 text-white p-2 rounded-lg">25% DISCOUNT</button>
+            <h1 class="w-56 text-4xl font-bold text-center text-gray-800">Summer Collection</h1>
             <h5 class="text-lg font-semibold text-gray-500">Starting @ $10</h5>
             <button class="text-lg font-semibold text-gray-500">SHOP NOW</button>
           </div>
@@ -1010,13 +409,8 @@
 
         <div class="OurServices w-full lg:w-2/6">
           <h1 class="text-xl font-semibold border-b pb-4 mb-8">Contactos</h1>
-          <div
-            style="height: 23rem"
-            class="w-full border rounded-xl flex flex-wrap justify-between lg:flex-col items-center lg:justify-center p-4 lg:px-8 lg:gap-8"
-          >
-            <div
-              class="w-1/2 lg:w-full flex justify-center lg:justify-between items-center gap-2"
-            >
+          <div style="height: 23rem" class="w-full border rounded-xl flex flex-wrap justify-between lg:flex-col items-center lg:justify-center p-4 lg:px-8 lg:gap-8">
+            <div class="w-1/2 lg:w-full flex justify-center lg:justify-between items-center gap-2">
               <ion-icon class="text-blue-600 text-4xl" name="call-outline"></ion-icon>
               <div>
                 <h3 class="font-semibold text-gray-700">+54 9 336 407-2597</h3>
@@ -1024,22 +418,15 @@
               </div>
             </div>
 
-            <div
-              class="w-1/2 lg:w-full flex justify-center lg:justify-between items-center gap-2"
-            >
-              <ion-icon
-                class="text-blue-600 text-4xl"
-                name="logo-whatsapp"
-              ></ion-icon>
+            <div class="w-1/2 lg:w-full flex justify-center lg:justify-between items-center gap-2">
+              <ion-icon class="text-blue-600 text-4xl" name="logo-whatsapp"></ion-icon>
               <div>
                 <h3 class="font-semibold text-gray-700">+54 9 336 407-2597</h3>
                 <p class="text-xs text-gray-600">Diego Toloza</p>
               </div>
             </div>
 
-            <div
-              class="w-1/2 lg:w-full flex justify-center lg:justify-between items-center gap-2"
-            >
+            <div class="w-1/2 lg:w-full flex justify-center lg:justify-between items-center gap-2">
               <ion-icon class="text-blue-600 text-4xl" name="logo-instagram"></ion-icon>
               <div>
                 <h3 class="font-semibold text-gray-700">Aberturas Fuerte Hogar</h3>
@@ -1047,13 +434,8 @@
               </div>
             </div>
 
-            <div
-              class="w-1/2 lg:w-full flex justify-center lg:justify-between items-center gap-2"
-            >
-              <ion-icon
-                class="text-blue-600 text-4xl"
-                name="location-outline"
-              ></ion-icon>
+            <div class="w-1/2 lg:w-full flex justify-center lg:justify-between items-center gap-2">
+              <ion-icon class="text-blue-600 text-4xl" name="location-outline"></ion-icon>
               <div>
                 <h3 class="font-semibold text-gray-700">Belgrano 2279</h3>
                 <p class="text-xs text-gray-600">For Order Over $100</p>
@@ -1074,32 +456,43 @@
 
     <!--todo footer -->
     <footer class="footer bg-[#212121]">
-      <div
-        class="mx-auto flex items-center justify-center flex-col gap-4 py-10 pb-20 lg:pb-10"
-      >
+      <div class="mx-auto flex items-center justify-center flex-col gap-4 py-10 pb-20 lg:pb-10">
         <img class="w-80" src="./assets/images/payment.png" alt="payment" />
-        <h4 class="text-gray-500 text-md lg:text-lg font-semibold">
-          ABERTURAS FUERTE HOGAR
-        </h4>
+        <h4 class="text-gray-500 text-md lg:text-lg font-semibold">ABERTURAS FUERTE HOGAR</h4>
       </div>
     </footer>
     <!--! icons -->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <!--!javascript file  -->
     <script type="module" src="./assets/index.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/sql.js/dist/sql-wasm.js"></script>
 
     <script>
-      
-    </script>
+      function mostrarCategoria(categoria) {
+        const productos = document.querySelectorAll("#products");
 
+        productos.forEach((producto) => {
+          if (categoria === "todos" || producto.dataset.category === categoria) {
+            producto.style.display = "block"; // Mostrar
+          } else {
+            producto.style.display = "none"; // Ocultar
+          }
+        });
+      }
+
+      function mostrarTipo(tipo) {
+        const productos = document.querySelectorAll("#products");
+
+        productos.forEach((producto) => {
+          if (producto.dataset.type === tipo) {
+            producto.style.display = "block"; // Mostrar
+          } else {
+            producto.style.display = "none"; // Ocultar
+          }
+        });
+      }
+    </script>
   </body>
 </html>

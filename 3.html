@@ -6,39 +6,26 @@
     <script src="https://cdn.jsdelivr.net/npm/sql.js/dist/sql-wasm.js"></script>
   </head>
   <body>
-    <button id="cargarBD">Cargar y Mostrar Datos</button>
-    <pre id="resultado"></pre>
+    <div id="producto" data-category="electronica">Producto 1</div>
+    <div id="producto" data-category="ropa">Producto 2</div>
+    <div id="producto" data-category="hogar">Producto 3</div>
 
+    <button onclick="mostrarCategoria('todos')">Todos</button>
+    <button onclick="mostrarCategoria('electronica')">Electrónica</button>
+    <a href="javascript:mostrarCategoria('ropa')">Ropa</a>
+    <button onclick="mostrarCategoria('hogar')">Hogar</button>
     <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        // Función para cargar la base de datos automáticamente
-        fetch("./database/database.db")
-          .then((res) => res.arrayBuffer())
-          .then((buf) =>
-            initSqlJs({
-              locateFile: (filename) =>
-                `https://cdn.jsdelivr.net/npm/sql.js/dist/${filename}`,
-            }).then((SQL) => {
-              const db = new SQL.Database(new Uint8Array(buf));
-              const present = db.exec("SELECT present FROM products;");
-              const output = document.getElementById("resultado");
+      function mostrarCategoria(categoria) {
+        const productos = document.querySelectorAll("#producto");
 
-              if (present.length === 0) {
-                output.textContent = "No hay resultados o la tabla no existe.";
-                db.close();
-                return;
-              }
-
-              // Mostrar los valores en la página
-              // Asegúrate de que 'present[0].values' tenga datos
-              output.textContent = present[0].values[0][0]; // correcto si quieres el primer valor
-              db.close();
-            })
-          )
-          .catch(() => {
-            alert("Error al cargar la base de datos");
-          });
-      });
+        productos.forEach((producto) => {
+          if (categoria === "todos" || producto.dataset.category === categoria) {
+            producto.style.display = "block"; // Mostrar
+          } else {
+            producto.style.display = "none"; // Ocultar
+          }
+        });
+      }
     </script>
   </body>
 </html>

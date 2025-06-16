@@ -1,25 +1,95 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // Función para cargar la base de datos automáticamente
-  fetch("./database/database.db")
-    .then((res) => res.arrayBuffer())
-    .then((buf) =>
-      initSqlJs({
-        locateFile: (filename) =>
-          `https://cdn.jsdelivr.net/npm/sql.js/dist/${filename}`,
-      }).then((SQL) => {
-        const db = new SQL.Database(new Uint8Array(buf));
-        const present = db.exec("SELECT present FROM products;");
+let category = [];
+let type = [];
+let name = [];
+let image = [];
+let imageHover = [];
+let info = [];
+let price = [];
 
-        // Mostrar los valores en la página
-        // Asegúrate de que 'present[0].values' tenga datos
-        console.log(present[0].values[0][0]);
-        db.close();
-      })
-    )
-    .catch((e) => {
-      console.log(e);
-    });
-});
+try {
+  const res = await fetch("./database/database.db");
+  const buf = await res.arrayBuffer();
+
+  const SQL = await initSqlJs({
+    locateFile: (filename) => `https://cdn.jsdelivr.net/npm/sql.js/dist/${filename}`,
+  });
+
+  const db = new SQL.Database(new Uint8Array(buf));
+  let result = db.exec("SELECT category FROM abertures;");
+
+  if (result.length && result[0].values.length) {
+    category = result[0].values.map((row) => row[0]);
+  } else {
+    console.log("No se encontraron datos");
+  }
+
+  //***********************************************/
+
+  result = db.exec("SELECT type FROM abertures;");
+
+  if (result.length && result[0].values.length) {
+    type = result[0].values.map((row) => row[0]);
+  } else {
+    console.log("No se encontraron datos");
+  }
+
+  //***********************************************/
+
+  result = db.exec("SELECT name FROM abertures;");
+
+  if (result.length && result[0].values.length) {
+    name = result[0].values.map((row) => row[0]);
+  } else {
+    console.log("No se encontraron datos");
+  }
+
+  //***********************************************/
+
+  result = db.exec("SELECT image FROM abertures;");
+
+  if (result.length && result[0].values.length) {
+    image = result[0].values.map((row) => row[0]);
+  } else {
+    console.log("No se encontraron datos");
+  }
+
+  //***********************************************/
+
+  result = db.exec("SELECT imageHover FROM abertures;");
+
+  if (result.length && result[0].values.length) {
+    imageHover = result[0].values.map((row) => row[0]);
+  } else {
+    console.log("No se encontraron datos");
+  }
+
+  //***********************************************/
+
+  result = db.exec("SELECT info FROM abertures;");
+
+  if (result.length && result[0].values.length) {
+    info = result[0].values.map((row) => row[0]);
+  } else {
+    console.log("No se encontraron datos");
+  }
+
+  //***********************************************/
+
+  result = db.exec("SELECT price FROM abertures;");
+
+  if (result.length && result[0].values.length) {
+    price = result[0].values.map((row) => row[0]);
+  } else {
+    console.log("No se encontraron datos");
+  }
+  db.close();
+
+  //***********************************************/
+} catch (e) {
+  console.error("Error cargando la base de datos:", e);
+}
+
+console.log(name, category, price, info);
 
 const swiperData = [];
 
@@ -101,127 +171,16 @@ export const BolgSwiper = [
 
 const NewProducts = [];
 
-for (let i = 1; i <= 12; i++) {
+for (let i = category.length - 1; i >= 0; i--) {
   NewProducts.push({
-    present: `hola`,
-    productPic: "./assets/images/products/shoe-1.jpg",
-    productHover: "./assets/images/products/shoe-1.jpg",
-    productName: "SHORTS",
-    productInfo: "Better Basics French Terry Sweatshorts",
-    productPrice: "$48.00",
-    taxPrice: "$75.00",
+    productCategory: category[i],
+    productType: type[i],
+    productName: name[i],
+    productPic: image[i],
+    productHover: imageHover[i],
+    productInfo: info[i],
+    productPrice: price[i],
   });
 }
 
 export { NewProducts };
-
-/*export const NewProducts = [
-  {
-    present: "15%",
-    productPic: "./assets/images/products/shoe-1.jpg",
-    productHover: "./assets/images/products/shoe-1.jpg",
-    productName: "SHORTS",
-    productInfo: "Better Basics French Terry Sweatshorts",
-    productPrice: "$48.00",
-    taxPrice: "$75.00",
-  },
-  {
-    present: "",
-    productPic: "./assets/images/products/shoe-1.jpg",
-    productHover: "./assets/images/products/shoe-1.jpg",
-    productName: "SHORTS",
-    productInfo: "Better Basics French Terry Sweatshorts",
-    productPrice: "$48.00",
-    taxPrice: "$75.00",
-  },
-  {
-    present: "12%",
-    productPic: "./assets/images/products/shoe-1.jpg",
-    productHover: "./assets/images/products/shoe-1.jpg",
-    productName: "SHORTS",
-    productInfo: "Better Basics French Terry Sweatshorts",
-    productPrice: "$48.00",
-    taxPrice: "$75.00",
-  },
-  {
-    present: "",
-    productPic: "./assets/images/products/shoe-1.jpg",
-    productHover: "./assets/images/products/shoe-1.jpg",
-    productName: "SHORTS",
-    productInfo: "Better Basics French Terry Sweatshorts",
-    productPrice: "$48.00",
-    taxPrice: "$75.00",
-  },
-  {
-    present: "",
-    productPic: "./assets/images/products/shoe-1.jpg",
-    productHover: "./assets/images/products/shoe-1.jpg",
-    productName: "SHORTS",
-    productInfo: "Better Basics French Terry Sweatshorts",
-    productPrice: "$48.00",
-    taxPrice: "$75.00",
-  },
-  {
-    present: "",
-    productPic: "./assets/images/products/shoe-1.jpg",
-    productHover: "./assets/images/products/shoe-1.jpg",
-    productName: "SHORTS",
-    productInfo: "Better Basics French Terry Sweatshorts",
-    productPrice: "$48.00",
-    taxPrice: "$75.00",
-  },
-  {
-    present: "",
-    productPic: "./assets/images/products/shoe-1.jpg",
-    productHover: "./assets/images/products/shoe-1.jpg",
-    productName: "SHORTS",
-    productInfo: "Better Basics French Terry Sweatshorts",
-    productPrice: "$48.00",
-    taxPrice: "$75.00",
-  },
-  {
-    present: "",
-    productPic: "./assets/images/products/shoe-1.jpg",
-    productHover: "./assets/images/products/shoe-1.jpg",
-    productName: "SHORTS",
-    productInfo: "Better Basics French Terry Sweatshorts",
-    productPrice: "$48.00",
-    taxPrice: "$75.00",
-  },
-  {
-    present: "",
-    productPic: "./assets/images/products/shoe-1.jpg",
-    productHover: "./assets/images/products/shoe-1.jpg",
-    productName: "SHORTS",
-    productInfo: "Better Basics French Terry Sweatshorts",
-    productPrice: "$48.00",
-    taxPrice: "$75.00",
-  },
-  {
-    present: "",
-    productPic: "./assets/images/products/shoe-1.jpg",
-    productHover: "./assets/images/products/shoe-1.jpg",
-    productName: "SHORTS",
-    productInfo: "Better Basics French Terry Sweatshorts",
-    productPrice: "$48.00",
-    taxPrice: "$75.00",
-  },
-  {
-    present: "15%",
-    productPic: "./assets/images/products/shoe-1.jpg",
-    productHover: "./assets/images/products/shoe-1.jpg",
-    productName: "SHORTS",
-    productInfo: "Better Basics French Terry Sweatshorts",
-    productPrice: "$48.00",
-    taxPrice: "$75.00",
-  },
-  {
-    present: "",
-    productPic: "./assets/images/products/shoe-1.jpg",
-    productHover: "./assets/images/products/shoe-1.jpg",
-    productName: "SHORTS",
-    productInfo: "Better Basics French Terry Sweatshorts",
-    productPrice: "$48.00",
-    taxPrice: "$75.00",
-  },
-];*/
