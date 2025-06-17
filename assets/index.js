@@ -66,7 +66,7 @@ document.getElementById("swiperSlide").innerHTML = swiperData
   <div
     class="w-3/4 md:w-1/2 lg:ml-10 p-6 bg-gray-300/50 lg:bg-transparent rounded-xl flex flex-col justify-start items-start gap-2 ml-4"
   >
-    <h3 class="text-blue-600 text-lg font-semibold lg:font-bold lg:text-xl">
+    <h3 class="text-blue-900 text-lg font-semibold lg:font-bold lg:text-xl">
       ${item.title}
     </h3>
     <h1 class="text-gray-800 text-2xl lg:text-4xl font-extrabold">
@@ -97,7 +97,7 @@ class="w-12 h-12 border-2 bg-gray-400/20 rounded-lg flex items-center justify-ce
 </div>
 <div class="mr-auto ml-2">  
   <h3 class="font-semibold md:font-bold text-xs md:text-sm text-gray-700 mb-1">${item.title}</h3>
-  <button type="button" class="border-0 text-xs md:text-sm font-semibold text-blue-600">Ver Todo</button>
+  <button type="button" class="border-0 text-xs md:text-sm font-semibold text-blue-900">Ver Todo</button>
 </div>
 
 <span class="text-gray-400 text-xs">${item.count}</span>
@@ -115,8 +115,8 @@ document.getElementById("blog_swiper").innerHTML = BolgSwiper.map(
    style="background-image: url('${item.pic}')">
   </div>
   <div class="mt-4 flex flex-col items-start justify-start gap-2">
-  <h3 class="text-blue-600">${item.title}</h3>
-  <h2 class="font-semibold text-sm lg:text-lg hover:text-blue-600 cursor-pointer">${item.info}</h2>
+  <h3 class="text-blue-900">${item.title}</h3>
+  <h2 class="font-semibold text-sm lg:text-lg hover:text-blue-900 cursor-pointer">${item.info}</h2>
   <h4 class="text-gray-500 text-xs lg:text-sm">${item.date}</h4>
   </div>
   </div>
@@ -148,7 +148,7 @@ document.getElementById("newProducts").innerHTML = NewProducts.map(
       />
     </div>
 
-    <h3 class="text-blue-600">${item.productName}</h3>
+    <h3 class="text-blue-900">${item.productName}</h3>
     <h5>${item.productInfo}</h5>
 
     <div
