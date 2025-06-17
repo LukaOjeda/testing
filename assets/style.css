@@ -3,7 +3,7 @@
   background-position: center center;
   background-size: cover;
   user-select: none;
-  outline-color: #1e4088;
+  outline-color: rgb(21, 70, 204);
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 body {
@@ -22,7 +22,7 @@ img {
   width: 0.5rem;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: #1e4088;
+  background-color: rgb(21, 70, 204);
   border-radius: 1rem;
 }
 ::-webkit-scrollbar-track {
@@ -55,7 +55,7 @@ img {
   animation: hoverAnimation 0.3s ease-in-out forwards;
 }
 .desktopNavbar a:hover {
-  color: #1e4088;
+  color: rgb(21, 70, 204);
 }
 @keyframes hoverAnimation {
   from {
@@ -86,7 +86,7 @@ details a {
   color: #899098;
 }
 details a:hover {
-  color: #1e4088;
+  color: rgb(21, 70, 204);
 }
 details > summary {
   direction: rtl;
@@ -151,7 +151,7 @@ details[open] > summary {
 /* main  Banner */
 .swiper {
   width: 80%;
-  bottom: -30px;
+  margin-top: 30px;
 }
 .categories_swiper {
   width: 80%;
@@ -198,7 +198,7 @@ details[open] > summary {
   background-color: #616161 !important;
 }
 .aside_section:hover::-webkit-scrollbar-thumb {
-  background-color: #1e4088 !important;
+  background-color: rgb(21, 70, 204) !important;
 }
 
 .product_hover_pic {
@@ -229,8 +229,8 @@ hr {
   border-color: rgba(116, 116, 116, 0.733) !important;
 }
 hr.title {
-  border-color: #1e4088 !important;
+  border-color: rgb(21, 70, 204) !important;
 }
 footer a:hover {
-  color: #1e4088;
+  color: rgb(21, 70, 204);
 }
