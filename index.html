@@ -36,27 +36,9 @@
       >
         <div class="flex w-full items-center justify-between p-4 md:px-20 border-b">
           <div class="icons hidden lg:flex items-center gap-2">
-            <a
-              class="text-gray-700 bg-gray-300/50 p-1 rounded-md hover:scale-110 hover:text-white hover:bg-blue-900 flex items-center justify-center transition-all"
-              href="#"
-            >
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-            <a
-              class="text-gray-700 bg-gray-300/50 p-1 rounded-md hover:scale-110 hover:text-white hover:bg-blue-900 flex items-center justify-center transition-all"
-              href="#"
-            >
-              <ion-icon name="logo-whatsapp"></ion-icon>
-            </a>
-            <a
-              class="text-gray-700 bg-gray-300/50 p-1 rounded-md hover:scale-110 hover:text-white hover:bg-blue-900 flex items-center justify-center transition-all"
-              href="#"
-            >
-              <ion-icon name="mail"></ion-icon>
-            </a>
           </div>
           <h3 class="text-gray-400 font-semibold text-xs">
-            ABRETURAS FUERTE HOGAR hola
+            ABRETURAS FUERTE HOGAR
           </h3>
           
           <div class="select hidden md:flex">
@@ -110,13 +92,13 @@
           class="hidden fixed top-0 left-0 w-screen h-screen bg-gray-500/30 z-10"
         ></div>
 
-        <!--! sidebarNavbar -->
+        <!--! sidebarNavbar PHONE -->
         <div
           class="fixed top-0 w-72 h-screen bg-white p-4 shadow-lg hidden flex-col justify-start gap-4 text-lg font-semibold overflow-auto z-20"
           id="sidebarNavbar"
         >
           <div class="flex justify-between border-b-2 py-4">
-            <h3 class="text-blue-900">Menu</h3>
+            <h3 class="text-blue-900">Menú</h3>
             <button class="closeButton hover:text-blue-900">
               <ion-icon name="close-circle-outline"></ion-icon>
             </button>
@@ -127,7 +109,6 @@
               <a href="javascript:mostrarTipo('interior')">Interior</a>
               <a href="javascript:mostrarTipo('aluminio')">Aluminio</a>
               <a href="javascript:mostrarTipo('chapa')">Chapa</a>
-              <a href="javascript:mostrarTipo('mosquitero')">Mosquitero</a>
               <a href="javascript:mostrarCategoria('puertas')">Todo en puertas</a>
               <summary> Puertas </summary>
             </details>
@@ -137,10 +118,24 @@
               <a href="javascript:mostrarTipo('aireador')">Aireadores</a>
               <a href="javascript:mostrarTipo('bisagra')">Ventanas de bisabra</a>
               <a href="javascript:mostrarTipo('corrediza')">Ventanas corredizas</a>
-              <a href="javascript:mostrarTipo('reja')">Rejas</a>
-              <a href="javascript:mostrarTipo('mosquitero')">Mosquiteros</a>
               <a href="javascript:mostrarCategoria('ventanas')">Todo en ventanas</a>
               <summary> Ventanas </summary>
+            </details>
+          </div>
+          <div class="mobile_navbar_item border-b pb-3 text-gray-600">
+            <details>
+              <a href="javascript:mostrarTipo('interior')">Para puertas</a>
+              <a href="javascript:mostrarTipo('aluminio')">Para ventanas</a>
+              <a href="javascript:mostrarCategoria('puertas')">Todo en rejas</a>
+              <summary> Rejas </summary>
+            </details>
+          </div>
+          <div class="mobile_navbar_item border-b pb-3 text-gray-600">
+            <details>
+              <a href="javascript:mostrarTipo('interior')">Para puertas</a>
+              <a href="javascript:mostrarTipo('aluminio')">Para ventanas</a>
+              <a href="javascript:mostrarCategoria('puertas')">Todo en mosquiteros</a>
+              <summary> Mosquiteros </summary>
             </details>
           </div>
           <div class="mobile_navbar_item border-b pb-3 text-gray-600">
@@ -149,6 +144,7 @@
               <summary> Portones </summary>
             </details>
           </div>
+          
 
           <div class="icons flex items-center justify-center gap-4">
             <a
@@ -284,20 +280,28 @@
               <div class="border-b pb-3 text-lg text-gray-600">
                 <details>
                   <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Aluminio</a>
+                    <a href="javascript:mostrarTipo('aluminio')">Aluminio</a>
                     <span>300</span>
                   </div>
                   <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Chapa</a>
+                    <a href="javascript:mostrarTipo('chapa')">Chapa</a>
                     <span>30</span>
                   </div>
                   <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Interior</a>
+                    <a href="javascript:mostrarTipo('interior')">Interior</a>
                     <span>50</span>
                   </div>
                   <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Todo en puertas</a>
+                    <a href="javascript:mostrarCategoria('doble')">Dobles</a>
                     <span>120</span>
+                  </div>
+                  <div class="flex justify-between items-baseline text-sm">
+                    <a href="javascript:mostrarCategoria('puerta')">Medias</a>
+                    <span>140</span>
+                  </div>
+                  <div class="flex justify-between items-baseline text-sm">
+                    <a href="javascript:mostrarCategoria('puertas')">Todo en puertas</a>
+                    <span>210</span>
                   </div>
                   <summary>
                     <div class="flex items-center gap-2">
@@ -314,19 +318,19 @@
               <div class="border-b pb-3 text-lg text-gray-600">
                 <details>
                   <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Aireadores</a>
+                    <a href="javascript:mostrarTipo('aireador')">Aireadores</a>
                     <span>300</span>
                   </div>
                   <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Ventanas de bisagra</a>
+                    <a href="javascript:mostrarTipo('bisagra')">Ventanas de bisagra</a>
                     <span>30</span>
                   </div>
                   <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Ventanas corredizas</a>
+                    <a href="javascript:mostrarTipo('corrediza')">Ventanas corredizas</a>
                     <span>50</span>
                   </div>
                   <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Todo en puertas</a>
+                    <a href="javascript:mostrarCategoria('ventanas')">Todo en ventanas</a>
                     <span>120</span>
                   </div>
                   <summary>
@@ -344,16 +348,16 @@
               <div class="border-b pb-3 text-lg text-gray-600">
                 <details>
                   <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Rejas para puertas</a>
+                    <a href="javascript:mostrarTipo('aluminio')">Para puertas</a>
                     <span>300</span>
                   </div>
                   <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Rejas para ventanas</a>
+                    <a href="javascript:mostrarTipo('chapa')">Para ventanas</a>
                     <span>30</span>
                   </div>
                   <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Todo en rejas</a>
-                    <span>120</span>
+                    <a href="javascript:mostrarTipo('rejas')">Todo en rejas</a>
+                    <span>50</span>
                   </div>
                   <summary>
                     <div class="flex items-center gap-2">
@@ -370,15 +374,15 @@
               <div class="border-b pb-3 text-lg text-gray-600">
                 <details>
                   <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Earrings</a>
+                    <a href="javascript:mostrarTipo('aluminio')">Para puertas</a>
                     <span>300</span>
                   </div>
                   <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Couple Rings</a>
+                    <a href="javascript:mostrarTipo('chapa')">Para ventanas</a>
                     <span>30</span>
                   </div>
                   <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Necklace</a>
+                    <a href="javascript:mostrarTipo('interior')">Todo en mosquiteros</a>
                     <span>50</span>
                   </div>
                   <summary>
@@ -386,7 +390,7 @@
                       Mosquiteros
                       <img
                         class="w-4 h-4"
-                        src="./assets/images/icons/ironFence.png"
+                        src="./assets/images/icons/door1.png"
                         alt="productPicture"
                       />
                     </div>
@@ -396,19 +400,7 @@
               <div class="border-b pb-3 text-lg text-gray-600">
                 <details>
                   <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Clothes Perfume</a>
-                    <span>300</span>
-                  </div>
-                  <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Deodorant</a>
-                    <span>30</span>
-                  </div>
-                  <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Jacket</a>
-                    <span>50</span>
-                  </div>
-                  <div class="flex justify-between items-baseline text-sm">
-                    <a href="#">Dress & Frock</a>
+                    <a href="javascript:mostrarCategoria('porton')">Todo en portones</a>
                     <span>120</span>
                   </div>
                   <summary>
@@ -715,19 +707,14 @@
           >
             <img
               class="w-20 h-20 rounded-full"
-              src="./assets/images/testimonial-1.jpg"
+              src="./assets/images/logo/logo.png"
               alt="nosotros"
             />
-            <h2 class="text-lg font-bold text-gray-600">Diego Toloza</h2>
-            <h5 class="text-md">Dueño de Aberturas Fuerte Hogar</h5>
-            <img
-              class="w-6 h-6 my-4"
-              src="./assets/images/icons/quotes.svg"
-              alt="quotes"
-            />
+            <h2 class="text-lg font-bold text-gray-600">Fuerte Hogar</h2>
+            <h5 class="text-gray-500">tu mejor opción en soluciones de aberturas</h5>
             <p class="text-sm w-4/5 mx-auto text-center">
-              Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor dolor sit
-              amet.
+              
+<br>Con años de experiencia en el sector, nos especializamos en ofrecer productos de alta calidad, diseño innovador y atención personalizada. Nuestro compromiso es brindarte seguridad, durabilidad y estética, garantizando tu satisfacción en cada detalle. Confía en nosotros para transformar tus espacios con profesionalismo y dedicación.
             </p>
           </div>
         </div>
@@ -759,9 +746,9 @@
             <div
               class="w-1/2 lg:w-full flex justify-center lg:justify-between items-center gap-2"
             >
-              <ion-icon class="text-blue-600 text-4xl" name="call-outline"></ion-icon>
+              <ion-icon class="text-blue-600 text-4xl" name="logo-whatsapp"></ion-icon>
               <div>
-                <h3 class="font-semibold text-gray-700">+54 9 336 407-2597</h3>
+                <h3 class="font-semibold text-gray-700">336 437-7951</h3>
                 <p class="text-xs text-gray-600">Diego Toloza</p>
               </div>
             </div>
@@ -771,11 +758,11 @@
             >
               <ion-icon
                 class="text-blue-600 text-4xl"
-                name="logo-whatsapp"
+                name="location-outline"
               ></ion-icon>
               <div>
-                <h3 class="font-semibold text-gray-700">+54 9 336 407-2597</h3>
-                <p class="text-xs text-gray-600">Diego Toloza</p>
+                <h3 class="font-semibold text-gray-700">Belgrano 2279</h3>
+                <p class="text-xs text-gray-600">For Order Over $100</p>
               </div>
             </div>
 
@@ -794,7 +781,7 @@
             >
               <ion-icon
                 class="text-blue-600 text-4xl"
-                name="location-outline"
+                name="logo-facebook"
               ></ion-icon>
               <div>
                 <h3 class="font-semibold text-gray-700">Belgrano 2279</h3>

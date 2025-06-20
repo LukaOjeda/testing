@@ -207,7 +207,7 @@ details[open] > summary {
 }
 .product_pic:hover .product_hover_pic {
   opacity: 1;
-  transform: scale(1.2);
+  transform: scale(1.05);
 }
 .productOptions {
   animation: productopt 0.2s ease-out forwards;

@@ -138,7 +138,7 @@ document.getElementById("newProducts").innerHTML = NewProducts.map(
     <div
       class="w-full h-1/2 mb-2"
       style="
-        background-image: url('${item.productPic}');
+        background-image: url('${item.productPic}'); width: auto; height: auto;
       "
     >
       <img
