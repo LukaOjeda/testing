@@ -128,7 +128,7 @@ document.getElementById("newProducts").innerHTML = NewProducts.map(
   (item) =>
     `
     <div
-    class="product_pic cursor-pointer overflow-hidden flex flex-col gap-2 p-4 w-full h-92 border shadow-md bg-white rounded-lg relative" id="products" data-category="${item.productCategory}" data-type="${item.productType}"
+    class="product_pic cursor-pointer overflow-hidden flex flex-col gap-2 p-4 w-full h-92 border shadow-md bg-white rounded-lg relative product-item" id="products" data-category="${item.productCategory}" data-type="${item.productType}" data-rowid="${item.productId}"
   >
     <div
       class="productOptions hidden flex-col gap-2 absolute right-2 top-2 text-xl font-semibold z-10"
@@ -159,6 +159,13 @@ document.getElementById("newProducts").innerHTML = NewProducts.map(
   </div>
     `
 ).join("");
+
+document.querySelectorAll(".product-item").forEach((item) => {
+  item.addEventListener("click", () => {
+    const id = item.getAttribute("data-rowid");
+    window.location.href = `products.html?id=${id}`;
+  });
+});
 
 const swiper = new Swiper(swiperr, {
   grabCursor: true,

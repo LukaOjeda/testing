@@ -2,30 +2,30 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <title>Ejemplo básico con sql.js</title>
-    <script src="https://cdn.jsdelivr.net/npm/sql.js/dist/sql-wasm.js"></script>
+    <title>Listado de Aberturas</title>
   </head>
   <body>
-    <div id="producto" data-category="electronica">Producto 1</div>
-    <div id="producto" data-category="ropa">Producto 2</div>
-    <div id="producto" data-category="hogar">Producto 3</div>
+    <h1>Productos</h1>
 
-    <button onclick="mostrarCategoria('todos')">Todos</button>
-    <button onclick="mostrarCategoria('electronica')">Electrónica</button>
-    <a href="javascript:mostrarCategoria('ropa')">Ropa</a>
-    <button onclick="mostrarCategoria('hogar')">Hogar</button>
+    <div class="producto" data-id="0">Abertura 1</div>
+    <div class="producto" data-id="1">Abertura 2</div>
+    <div class="producto" data-id="2">Abertura 3</div>
+
     <script>
-      function mostrarCategoria(categoria) {
-        const productos = document.querySelectorAll("#producto");
+      // Datos de ejemplo de productos
+      const productos = [
+        { productId: "0", productName: "Abertura 1", description: "Descripción de Abertura 1" },
+        { productId: "1", productName: "Abertura 2", description: "Descripción de Abertura 2" },
+        { productId: "2", productName: "Abertura 3", description: "Descripción de Abertura 3" },
+      ];
 
-        productos.forEach((producto) => {
-          if (categoria === "todos" || producto.dataset.category === categoria) {
-            producto.style.display = "block"; // Mostrar
-          } else {
-            producto.style.display = "none"; // Ocultar
-          }
+      // Agregar evento a cada producto
+      document.querySelectorAll(".producto").forEach((item) => {
+        item.addEventListener("click", () => {
+          const id = item.getAttribute("data-id");
+          window.location.href = `producto.html?id=${id}`;
         });
-      }
+      });
     </script>
   </body>
 </html>

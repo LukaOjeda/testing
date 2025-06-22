@@ -5,6 +5,7 @@ let image = [];
 let imageHover = [];
 let info = [];
 let price = [];
+let id;
 
 try {
   const res = await fetch("./database/database.db");
@@ -89,8 +90,6 @@ try {
   console.error("Error cargando la base de datos:", e);
 }
 
-console.log(name, category, price, info);
-
 const swiperData = [];
 
 for (let i = 1; i <= 3; i++) {
@@ -172,7 +171,9 @@ export const BolgSwiper = [
 const NewProducts = [];
 
 for (let i = category.length - 1; i >= 0; i--) {
+  id = i.toString();
   NewProducts.push({
+    productId: id,
     productCategory: category[i],
     productType: type[i],
     productName: name[i],
@@ -182,5 +183,7 @@ for (let i = category.length - 1; i >= 0; i--) {
     productPrice: price[i],
   });
 }
+
+console.log(NewProducts);
 
 export { NewProducts };
