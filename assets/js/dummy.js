@@ -5,6 +5,8 @@ let image = [];
 let imageHover = [];
 let info = [];
 let price = [];
+let offerPrice = [];
+let stock = [];
 let id;
 
 try {
@@ -76,10 +78,30 @@ try {
 
   //***********************************************/
 
+  result = db.exec("SELECT stock FROM abertures;");
+
+  if (result.length && result[0].values.length) {
+    stock = result[0].values.map((row) => row[0]);
+  } else {
+    console.log("No se encontraron datos");
+  }
+
+   //***********************************************/
+
   result = db.exec("SELECT price FROM abertures;");
 
   if (result.length && result[0].values.length) {
     price = result[0].values.map((row) => row[0]);
+  } else {
+    console.log("No se encontraron datos");
+  }
+
+  //***********************************************/
+
+  result = db.exec("SELECT offerPrice FROM abertures;");
+
+  if (result.length && result[0].values.length) {
+    offerPrice = result[0].values.map((row) => row[0]);
   } else {
     console.log("No se encontraron datos");
   }
@@ -103,6 +125,8 @@ for (let i = category.length - 1; i >= 0; i--) {
     productHover: imageHover[i],
     productInfo: info[i],
     productPrice: price[i],
+    productOfferPrice: offerPrice[i],
+    productStock: stock[i],
   });
 }
 

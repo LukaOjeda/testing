@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>Panel de administración - Abertures</title>
+<style>
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #ccc; padding: 8px; }
+  th { background: #eee; }
+  input[type=text] { width: 100%; box-sizing: border-box; }
+  button { padding: 4px 8px; }
+</style>
+</head>
+<body>
+
+<h1>Administrar Abertures</h1>
+
+<table id="productos">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Categoría</th>
+      <th>Tipo</th>
+      <th>Nombre</th>
+      <th>Imagen (URL)</th>
+      <th>Info</th>
+      <th>Precio</th>
+      <th>Oferta</th>
+      <th>Stock</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+
+<h2>Agregar producto</h2>
+<form id="formAgregar">
+  <input type="text" name="category" placeholder="Categoría" required />
+  <input type="text" name="type" placeholder="Tipo" required />
+  <input type="text" name="name" placeholder="Nombre" required />
+  <input type="text" name="image" placeholder="URL Imagen" />
+  <input type="text" name="info" placeholder="Info" />
+  <input type="text" name="price" placeholder="Precio" />
+  <input type="text" name="offerPrice" placeholder="Oferta" />
+  <input type="text" name="stock" placeholder="Stock" />
+  <button type="submit">Agregar</button>
+</form>
+
+<script>
+async function cargarProductos() {
+  const res = await fetch('/api/products');
+  const productos = await res.json();
+
+  const tbody = document.querySelector('#productos tbody');
+  tbody.innerHTML = '';
+
+  productos.forEach(p => {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td>${p.id}</td>
+      <td contenteditable data-campo="category" data-id="${p.id}">${p.category || ''}</td>
+      <td contenteditable data-campo="type" data-id="${p.id}">${p.type || ''}</td>
+      <td contenteditable data-campo="name" data-id="${p.id}">${p.name || ''}</td>
+      <td contenteditable data-campo="image" data-id="${p.id}">${p.image || ''}</td>
+      <td contenteditable data-campo="info" data-id="${p.id}">${p.info || ''}</td>
+      <td contenteditable data-campo="price" data-id="${p.id}">${p.price || ''}</td>
+      <td contenteditable data-campo="offerPrice" data-id="${p.id}">${p.offerPrice || ''}</td>
+      <td contenteditable data-campo="stock" data-id="${p.id}">${p.stock || ''}</td>
+      <td><button data-id="${p.id}" class="btnEliminar">Eliminar</button></td>
+    `;
+    tbody.appendChild(tr);
+  });
+
+  // Agregar listener para editar celdas
+  tbody.querySelectorAll('td[contenteditable]').forEach(td => {
+    td.addEventListener('blur', async e => {
+      const id = td.dataset.id;
+      const campo = td.dataset.campo;
+      const valor = td.textContent.trim();
+
+      const res = await fetch('/api/products/' + id, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ campo, valor }),
+      });
+
+      if (!res.ok) {
+        alert('Error al actualizar');
+      }
+    });
+  });
+
+  // Listener para eliminar
+  tbody.querySelectorAll('.btnEliminar').forEach(btn => {
+    btn.addEventListener('click', async e => {
+      const id = btn.dataset.id;
+      if (!confirm('¿Eliminar producto #' + id + '?')) return;
+      const res = await fetch('/api/products/' + id, { method: 'DELETE' });
+      if (res.ok) {
+        cargarProductos();
+      } else {
+        alert('Error al eliminar');
+      }
+    });
+  });
+}
+
+document.getElementById('formAgregar').addEventListener('submit', async e => {
+  e.preventDefault();
+  const form = e.target;
+  const data = {
+    category: form.category.value,
+    type: form.type.value,
+    name: form.name.value,
+    image: form.image.value,
+    info: form.info.value,
+    price: form.price.value,
+    offerPrice: form.offerPrice.value,
+    stock: form.stock.value
+  };
+
+  const res = await fetch('/api/products', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data)
+  });
+
+  if (res.ok) {
+    form.reset();
+    cargarProductos();
+  } else {
+    alert('Error al agregar producto');
+  }
+});
+
+cargarProductos();
+</script>
+
+</body>
+</html>

@@ -5,78 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!--=============== FLATICON ===============-->
-    <link
-      rel="stylesheet"
-      href="https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-straight/css/uicons-regular-straight.css"
-    />
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-straight/css/uicons-regular-straight.css" />
 
     <!--=============== SWIPER CSS ===============-->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="./assets/css/styles.css" />
 
-    <title>Ecommerce Website</title>
+    <link rel="shortcut icon" href="./assets/img/logoIcon.jpg" type="image/x-icon" />
+    <title>Aberturas Fuerte Hogar</title>
   </head>
   <body>
     <!--=============== HEADER ===============-->
     <header class="header">
       <div class="header__top">
         <div class="header__container container">
-          <div class="header__contact">
-            <span>(+01) - 2345 - 6789</span>
-            <span>Our location</span>
-          </div>
-          <p class="header__alert-news">
-            Super Values Deals - Save more coupons
-          </p>
-          <a href="login-register.html" class="header__top-action">
-            Log In / Sign Up
-          </a>
+          <div class="header__contact"><ion-icon name="logo-whatsapp" class="ionicons"></ion-icon><span> 336437-7951</span> <ion-icon name="location-outline" class="ionicons"></ion-icon><span> Belgrano 2279 - V. Constitución, Santa Fe </span></div>
+          <p class="header__alert-news">Aberturas Fuerte Hogar</p>
+          <!-- <a href="login-register.html" class="header__top-action"> Iniciar sesión / Registrarse </a> -->
         </div>
       </div>
 
       <nav class="nav container">
         <a href="index.html" class="nav__logo">
-          <img
-            class="nav__logo-img"
-            src="assets/img/logo.svg"
-            alt="website logo"
-          />
+          <img class="nav__logo-img" src="assets/img/logo.png" alt="website logo" />
         </a>
         <div class="nav__menu" id="nav-menu">
+          <div class="nav__menu-top">
+            <a href="index.html" class="nav__menu-logo">
+              <img src="./assets/img/logo.svg" alt="" />
+            </a>
+            <div class="nav__close" id="nav-close">
+              <i class="fi fi-rs-cross-small"></i>
+            </div>
+          </div>
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="index.html" class="nav__link">Home</a>
+              <a href="index.html" class="nav__link active-link">Inicio</a>
             </li>
             <li class="nav__item">
-              <a href="shop.html" class="nav__link">Shop</a>
+              <a href="#products" class="nav__link">Nuestros productos</a>
             </li>
             <li class="nav__item">
-              <a href="accounts.html" class="nav__link">My Account</a>
-            </li>
-            <li class="nav__item">
-              <a href="compare.html" class="nav__link">Compare</a>
-            </li>
-            <li class="nav__item">
-              <a href="login-register.html" class="nav__link">Login</a>
+              <a href="#footer" class="nav__link">Nosotros</a>
             </li>
           </ul>
-          <div class="header__search">
-            <input
-              type="text"
-              placeholder="Search For Items..."
-              class="form__input"
-            />
-            <button class="search__btn">
-              <img src="assets/img/search.png" alt="search icon" />
-            </button>
-          </div>
         </div>
-        <div class="header__user-actions">
+        <!-- <div class="header__user-actions">
           <a href="wishlist.html" class="header__action-btn" title="Wishlist">
             <img src="assets/img/icon-heart.svg" alt="" />
             <span class="count">3</span>
@@ -85,7 +61,10 @@
             <img src="assets/img/icon-cart.svg" alt="" />
             <span class="count">3</span>
           </a>
-        </div>
+          <div class="header__action-btn nav__toggle" id="nav-toggle">
+            <img src="./assets//img/menu-burger.svg" alt="" />
+          </div>
+        </div> -->
       </nav>
     </header>
 
@@ -93,151 +72,47 @@
     <main class="main">
       <!--=============== BREADCRUMB ===============-->
       <section class="breadcrumb">
-        <ul class="breadcrumb__list flex container">
-          <li><a href="index.html" class="breadcrumb__link">Home</a></li>
-          <li><span class="breadcrumb__link"></span>></li>
-          <li><span class="breadcrumb__link">Fashion</span></li>
-          <li><span class="breadcrumb__link"></span>></li>
-          <li><span class="breadcrumb__link">Henley Shirt</span></li>
-        </ul>
+
       </section>
 
       <!--=============== DETAILS ===============-->
       <section class="details section--lg">
         <div class="details__container container grid">
-          <div class="details__group">
-            <img
-              src="./assets/img/product-8-1.jpg"
-              alt=""
-              class="details__img"
-            />
-            <div class="details__small-images grid">
-              <img
-                src="./assets/img/product-8-2.jpg"
-                alt=""
-                class="details__small-img"
-              />
-              <img
-                src="./assets/img/product-8-1.jpg"
-                alt=""
-                class="details__small-img"
-              />
-              <img
-                src="./assets/img/product-8-2.jpg"
-                alt=""
-                class="details__small-img"
-              />
-            </div>
+          <div class="details__group" id="detailsGroup">
+            
           </div>
+
+
+
+
           <div class="details__group">
-            <h3 class="details__title">Henley Shirt</h3>
-            <p class="details__brand">Brand: <span>adidas</span></p>
-            <div class="details__price flex">
-              <span class="new__price">$116</span>
-              <span class="old__price">$200.00</span>
-              <span class="save__price">25% Off</span>
+            <h3 class="details__title">Puerta de chapa</h3>
+            <p class="details__brand">Modelo: <span>Venuz Ciega</span></p>
+            <div class="details__price flex" id="detailsPrice">
+            
             </div>
-            <p class="short__description">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Voluptate, fuga. Quo blanditiis recusandae facere nobis cum optio,
-              inventore aperiam placeat, quis maxime nam officiis illum? Optio
-              et nisi eius, inventore impedit ratione sunt, cumque, eligendi
-              asperiores iste porro non error?
-            </p>
+            <p class="short__description" id="productDescription"></p>
             <ul class="products__list">
-              <li class="list__item flex">
-                <i class="fi-rs-crown"></i> 1 Year Al Jazeera Brand Warranty
-              </li>
-              <li class="list__item flex">
-                <i class="fi-rs-refresh"></i> 30 Days Return Policy
-              </li>
-              <li class="list__item flex">
-                <i class="fi-rs-credit-card"></i> Cash on Delivery available
-              </li>
+              <li class="list__item flex"><i class="fi-rs-crown"></i> 1 año de garantía</li>
+              <li class="list__item flex"><i class="fi-rs-refresh"></i> 30 días para devolución</li>
+              <li class="list__item flex"><i class="fi-rs-credit-card"></i> Tarjetas, efectivo o transferencia</li>
             </ul>
-            <div class="details__color flex">
-              <span class="details__color-title">Color</span>
-              <ul class="color__list">
-                <li>
-                  <a
-                    href="#"
-                    class="color__link"
-                    style="background-color: hsl(37, 100%, 65%)"
-                  ></a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="color__link"
-                    style="background-color: hsl(353, 100%, 65%)"
-                  ></a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="color__link"
-                    style="background-color: hsl(49, 100%, 60%)"
-                  ></a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="color__link"
-                    style="background-color: hsl(304, 100%, 78%)"
-                  ></a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="color__link"
-                    style="background-color: hsl(126, 61%, 52%)"
-                  ></a>
-                </li>
-              </ul>
-            </div>
-            <div class="details__size flex">
-              <span class="details__size-title">Size</span>
-              <ul class="size__list">
-                <li>
-                  <a href="#" class="size__link size-active">M</a>
-                </li>
-                <li>
-                  <a href="#" class="size__link">L</a>
-                </li>
-                <li>
-                  <a href="#" class="size__link">XL</a>
-                </li>
-                <li>
-                  <a href="#" class="size__link">XXL</a>
-                </li>
-              </ul>
-            </div>
             <div class="details__action">
-              <input type="number" class="quantity" value="3" />
-              <a href="#" class="btn btn--sm">Add To Card</a>
-              <a href="#" class="details__action-btn">
-                <i class="fi fi-rs-heart"></i>
-              </a>
+              <input type="number" class="quantity" value="1" />
+              <a href="#" class="btn btn--sm">Comprar</a>
             </div>
             <ul class="details__meta">
               <li class="meta__list flex"><span>SKU:</span>FWM15VKT</li>
-              <li class="meta__list flex">
-                <span>Tags:</span>Clothes, Women, Dress
-              </li>
-              <li class="meta__list flex">
-                <span>Availability:</span>8 Items in Stock
-              </li>
+              <li class="meta__list flex"><span>Stock:</span><div id="productStock"></div></li>
             </ul>
           </div>
         </div>
       </section>
 
       <!--=============== DETAILS TAB ===============-->
-      <section class="details__tab container">
+      <!-- <section class="details__tab container">
         <div class="detail__tabs">
-          <span class="detail__tab active-tab" data-target="#info">
-            Additional Info
-          </span>
+          <span class="detail__tab active-tab" data-target="#info"> Additional Info </span>
           <span class="detail__tab" data-target="#reviews">Reviews(3)</span>
         </div>
         <div class="details__tabs-content">
@@ -305,11 +180,7 @@
             <div class="reviews__container grid">
               <div class="review__single">
                 <div>
-                  <img
-                    src="./assets/img/avatar-1.jpg"
-                    alt=""
-                    class="review__img"
-                  />
+                  <img src="./assets/img/avatar-1.jpg" alt="" class="review__img" />
                   <h4 class="review__title">Jacky Chan</h4>
                 </div>
                 <div class="review__data">
@@ -320,19 +191,13 @@
                     <i class="fi fi-rs-star"></i>
                     <i class="fi fi-rs-star"></i>
                   </div>
-                  <p class="review__description">
-                    Thank you, very fast shipping from Poland only 3days.
-                  </p>
+                  <p class="review__description">Thank you, very fast shipping from Poland only 3days.</p>
                   <span class="review__date">December 4, 2022 at 3:12 pm</span>
                 </div>
               </div>
               <div class="review__single">
                 <div>
-                  <img
-                    src="./assets/img/avatar-2.jpg"
-                    alt=""
-                    class="review__img"
-                  />
+                  <img src="./assets/img/avatar-2.jpg" alt="" class="review__img" />
                   <h4 class="review__title">Meriem Js</h4>
                 </div>
                 <div class="review__data">
@@ -343,19 +208,13 @@
                     <i class="fi fi-rs-star"></i>
                     <i class="fi fi-rs-star"></i>
                   </div>
-                  <p class="review__description">
-                    Great low price and works well
-                  </p>
+                  <p class="review__description">Great low price and works well</p>
                   <span class="review__date">August 23, 2022 at 19:45 pm</span>
                 </div>
               </div>
               <div class="review__single">
                 <div>
-                  <img
-                    src="./assets/img/avatar-3.jpg"
-                    alt=""
-                    class="review__img"
-                  />
+                  <img src="./assets/img/avatar-3.jpg" alt="" class="review__img" />
                   <h4 class="review__title">Moh Benz</h4>
                 </div>
                 <div class="review__data">
@@ -366,10 +225,7 @@
                     <i class="fi fi-rs-star"></i>
                     <i class="fi fi-rs-star"></i>
                   </div>
-                  <p class="review__description">
-                    Authentic and beautiful, Love these ways more than ever
-                    expected, They are great earphones.
-                  </p>
+                  <p class="review__description">Authentic and beautiful, Love these ways more than ever expected, They are great earphones.</p>
                   <span class="review__date">March 2, 2021 at 10:01 am</span>
                 </div>
               </div>
@@ -384,13 +240,10 @@
                 <i class="fi fi-rs-star"></i>
               </div>
               <form action="" class="form grid">
-                <textarea
-                  class="form__input textarea"
-                  placeholder="Write Comment"
-                ></textarea>
+                <textarea class="form__input textarea" placeholder="Write Comment"></textarea>
                 <div class="form__group grid">
-                  <input type="text" placeholder="Name" class="form__input">
-                  <input type="email" placeholder="Email" class="form__input">
+                  <input type="text" placeholder="Name" class="form__input" />
+                  <input type="email" placeholder="Email" class="form__input" />
                 </div>
                 <div class="form__btn">
                   <button class="btn">Submit Review</button>
@@ -399,259 +252,18 @@
             </div>
           </div>
         </div>
-      </section>
-
-      <!--=============== PRODUCTS ===============-->
-      <section class="products container section--lg">
-        <h3 class="section__title"><span>Related</span> Products</h3>
-        <div class="products__container grid">
-          <div class="product__item">
-            <div class="product__banner">
-              <a href="details.html" class="product__images">
-                <img
-                  src="assets/img/product-1-1.jpg"
-                  alt=""
-                  class="product__img default"
-                />
-                <img
-                  src="assets/img/product-1-2.jpg"
-                  alt=""
-                  class="product__img hover"
-                />
-              </a>
-              <div class="product__actions">
-                <a href="#" class="action__btn" aria-label="Quick View">
-                  <i class="fi fi-rs-eye"></i>
-                </a>
-                <a
-                  href="#"
-                  class="action__btn"
-                  aria-label="Add to Wishlist"
-                >
-                  <i class="fi fi-rs-heart"></i>
-                </a>
-                <a href="#" class="action__btn" aria-label="Compare">
-                  <i class="fi fi-rs-shuffle"></i>
-                </a>
-              </div>
-              <div class="product__badge light-pink">Hot</div>
-            </div>
-            <div class="product__content">
-              <span class="product__category">Clothing</span>
-              <a href="details.html">
-                <h3 class="product__title">Colorful Pattern Shirts</h3>
-              </a>
-              <div class="product__rating">
-                <i class="fi fi-rs-star"></i>
-                <i class="fi fi-rs-star"></i>
-                <i class="fi fi-rs-star"></i>
-                <i class="fi fi-rs-star"></i>
-                <i class="fi fi-rs-star"></i>
-              </div>
-              <div class="product__price flex">
-                <span class="new__price">$238.85</span>
-                <span class="old__price">$245.8</span>
-              </div>
-              <a
-                href="#"
-                class="action__btn cart__btn"
-                aria-label="Add To Cart"
-              >
-                <i class="fi fi-rs-shopping-bag-add"></i>
-              </a>
-            </div>
-          </div>
-          <div class="product__item">
-            <div class="product__banner">
-              <a href="details.html" class="product__images">
-                <img
-                  src="assets/img/product-2-1.jpg"
-                  alt=""
-                  class="product__img default"
-                />
-                <img
-                  src="assets/img/product-2-2.jpg"
-                  alt=""
-                  class="product__img hover"
-                />
-              </a>
-              <div class="product__actions">
-                <a href="#" class="action__btn" aria-label="Quick View">
-                  <i class="fi fi-rs-eye"></i>
-                </a>
-                <a
-                  href="#"
-                  class="action__btn"
-                  aria-label="Add to Wishlist"
-                >
-                  <i class="fi fi-rs-heart"></i>
-                </a>
-                <a href="#" class="action__btn" aria-label="Compare">
-                  <i class="fi fi-rs-shuffle"></i>
-                </a>
-              </div>
-              <div class="product__badge light-green">Hot</div>
-            </div>
-            <div class="product__content">
-              <span class="product__category">Clothing</span>
-              <a href="details.html">
-                <h3 class="product__title">Colorful Pattern Shirts</h3>
-              </a>
-              <div class="product__rating">
-                <i class="fi fi-rs-star"></i>
-                <i class="fi fi-rs-star"></i>
-                <i class="fi fi-rs-star"></i>
-                <i class="fi fi-rs-star"></i>
-                <i class="fi fi-rs-star"></i>
-              </div>
-              <div class="product__price flex">
-                <span class="new__price">$238.85</span>
-                <span class="old__price">$245.8</span>
-              </div>
-              <a
-                href="#"
-                class="action__btn cart__btn"
-                aria-label="Add To Cart"
-              >
-                <i class="fi fi-rs-shopping-bag-add"></i>
-              </a>
-            </div>
-          </div>
-          <div class="product__item">
-            <div class="product__banner">
-              <a href="details.html" class="product__images">
-                <img
-                  src="assets/img/product-3-1.jpg"
-                  alt=""
-                  class="product__img default"
-                />
-                <img
-                  src="assets/img/product-3-2.jpg"
-                  alt=""
-                  class="product__img hover"
-                />
-              </a>
-              <div class="product__actions">
-                <a href="#" class="action__btn" aria-label="Quick View">
-                  <i class="fi fi-rs-eye"></i>
-                </a>
-                <a
-                  href="#"
-                  class="action__btn"
-                  aria-label="Add to Wishlist"
-                >
-                  <i class="fi fi-rs-heart"></i>
-                </a>
-                <a href="#" class="action__btn" aria-label="Compare">
-                  <i class="fi fi-rs-shuffle"></i>
-                </a>
-              </div>
-              <div class="product__badge light-orange">Hot</div>
-            </div>
-            <div class="product__content">
-              <span class="product__category">Clothing</span>
-              <a href="details.html">
-                <h3 class="product__title">Colorful Pattern Shirts</h3>
-              </a>
-              <div class="product__rating">
-                <i class="fi fi-rs-star"></i>
-                <i class="fi fi-rs-star"></i>
-                <i class="fi fi-rs-star"></i>
-                <i class="fi fi-rs-star"></i>
-                <i class="fi fi-rs-star"></i>
-              </div>
-              <div class="product__price flex">
-                <span class="new__price">$238.85</span>
-                <span class="old__price">$245.8</span>
-              </div>
-              <a
-                href="#"
-                class="action__btn cart__btn"
-                aria-label="Add To Cart"
-              >
-                <i class="fi fi-rs-shopping-bag-add"></i>
-              </a>
-            </div>
-          </div>
-          <div class="product__item">
-            <div class="product__banner">
-              <a href="details.html" class="product__images">
-                <img
-                  src="assets/img/product-4-1.jpg"
-                  alt=""
-                  class="product__img default"
-                />
-                <img
-                  src="assets/img/product-4-2.jpg"
-                  alt=""
-                  class="product__img hover"
-                />
-              </a>
-              <div class="product__actions">
-                <a href="#" class="action__btn" aria-label="Quick View">
-                  <i class="fi fi-rs-eye"></i>
-                </a>
-                <a
-                  href="#"
-                  class="action__btn"
-                  aria-label="Add to Wishlist"
-                >
-                  <i class="fi fi-rs-heart"></i>
-                </a>
-                <a href="#" class="action__btn" aria-label="Compare">
-                  <i class="fi fi-rs-shuffle"></i>
-                </a>
-              </div>
-              <div class="product__badge light-blue">Hot</div>
-            </div>
-            <div class="product__content">
-              <span class="product__category">Clothing</span>
-              <a href="details.html">
-                <h3 class="product__title">Colorful Pattern Shirts</h3>
-              </a>
-              <div class="product__rating">
-                <i class="fi fi-rs-star"></i>
-                <i class="fi fi-rs-star"></i>
-                <i class="fi fi-rs-star"></i>
-                <i class="fi fi-rs-star"></i>
-                <i class="fi fi-rs-star"></i>
-              </div>
-              <div class="product__price flex">
-                <span class="new__price">$238.85</span>
-                <span class="old__price">$245.8</span>
-              </div>
-              <a
-                href="#"
-                class="action__btn cart__btn"
-                aria-label="Add To Cart"
-              >
-                <i class="fi fi-rs-shopping-bag-add"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      </section> -->
 
       <!--=============== NEWSLETTER ===============-->
       <section class="newsletter section">
         <div class="newsletter__container container grid">
           <h3 class="newsletter__title flex">
-            <img
-              src="./assets/img/icon-email.svg"
-              alt=""
-              class="newsletter__icon"
-            />
+            <img src="./assets/img/icon-email.svg" alt="" class="newsletter__icon" />
             Sign in to Newsletter
           </h3>
-          <p class="newsletter__description">
-            ...and receive $25 coupon for first shopping.
-          </p>
+          <p class="newsletter__description">...and receive $25 coupon for first shopping.</p>
           <form action="" class="newsletter__form">
-            <input
-              type="text"
-              placeholder="Enter Your Email"
-              class="newsletter__input"
-            />
+            <input type="text" placeholder="Enter Your Email" class="newsletter__input" />
             <button type="submit" class="newsletter__btn">Subscribe</button>
           </form>
         </div>
@@ -663,71 +275,34 @@
       <div class="footer__container grid">
         <div class="footer__content">
           <a href="index.html" class="footer__logo">
-            <img src="./assets/img/logo.svg" alt="" class="footer__logo-img" />
+            <img src="./assets/img/logo.png" alt="" class="footer__logo-img" />
           </a>
-          <h4 class="footer__subtitle">Contact</h4>
-          <p class="footer__description">
-            <span>Address:</span> 13 Tlemcen Road, Street 32, Beb-Wahren
-          </p>
-          <p class="footer__description">
-            <span>Phone:</span> +01 2222 365 /(+91) 01 2345 6789
-          </p>
-          <p class="footer__description">
-            <span>Hours:</span> 10:00 - 18:00, Mon - Sat
-          </p>
+          <h4 class="footer__subtitle">Contactos</h4>
+          <p class="footer__description"><span>Dirección:</span> Belgrano</p>
+          <p class="footer__description"><span>Teléfono:</span> 336 437-7951</p>
+          <p class="footer__description"><span>Horarios:</span> 10:00 - 18:00, Mon - Sat</p>
           <div class="footer__social">
-            <h4 class="footer__subtitle">Follow Me</h4>
+            <h4 class="footer__subtitle">¡Seguinos!</h4>
             <div class="footer__links flex">
               <a href="#">
-                <img
-                  src="./assets/img/icon-facebook.svg"
-                  alt=""
-                  class="footer__social-icon"
-                />
+                <img src="./assets/img/icon-facebook.svg" alt="" class="footer__social-icon" />
               </a>
               <a href="#">
-                <img
-                  src="./assets/img/icon-twitter.svg"
-                  alt=""
-                  class="footer__social-icon"
-                />
+                <img src="./assets/img/icon-instagram.svg" alt="" class="footer__social-icon" />
               </a>
-              <a href="#">
-                <img
-                  src="./assets/img/icon-instagram.svg"
-                  alt=""
-                  class="footer__social-icon"
-                />
-              </a>
-              <a href="#">
-                <img
-                  src="./assets/img/icon-pinterest.svg"
-                  alt=""
-                  class="footer__social-icon"
-                />
-              </a>
-              <a href="#">
-                <img
-                  src="./assets/img/icon-youtube.svg"
-                  alt=""
-                  class="footer__social-icon"
-                />
               </a>
             </div>
           </div>
         </div>
-        <div class="footer__content">
-          <h3 class="footer__title">Address</h3>
+        <div class="footer__content" id="footer">
+          <h3 class="footer__title">Información</h3>
           <ul class="footer__links">
-            <li><a href="#" class="footer__link">About Us</a></li>
-            <li><a href="#" class="footer__link">Delivery Information</a></li>
-            <li><a href="#" class="footer__link">Privacy Policy</a></li>
-            <li><a href="#" class="footer__link">Terms & Conditions</a></li>
-            <li><a href="#" class="footer__link">Contact Us</a></li>
-            <li><a href="#" class="footer__link">Support Center</a></li>
+            <li><a href="#" class="footer__link">Sobre nosotros</a></li>
+            <li><a href="#" class="footer__link">Envíos</a></li>
+            <li><a href="#" class="footer__link">Nuestros contactos</a></li>
           </ul>
         </div>
-        <div class="footer__content">
+        <!-- <div class="footer__content">
           <h3 class="footer__title">My Account</h3>
           <ul class="footer__links">
             <li><a href="#" class="footer__link">Sign In</a></li>
@@ -737,19 +312,15 @@
             <li><a href="#" class="footer__link">Help</a></li>
             <li><a href="#" class="footer__link">Order</a></li>
           </ul>
-        </div>
+        </div> -->
         <div class="footer__content">
           <h3 class="footer__title">Secured Payed Gateways</h3>
-          <img
-            src="./assets/img/payment-method.png"
-            alt=""
-            class="payment__img"
-          />
+          <img src="./assets/img/payment-method.png" alt="" class="payment__img" />
         </div>
       </div>
       <div class="footer__bottom">
-        <p class="copyright">&copy; 2024 Evara. All right reserved</p>
-        <span class="designer">Designer by Crypticalcoder</span>
+        <p class="copyright">&copy; 2025 Fuerte Hogar. Todos los derechos reservados.</p>
+        <span class="designer">Diseñado por Lucas Ojeda</span>
       </div>
     </footer>
 
@@ -758,5 +329,12 @@
 
     <!--=============== MAIN JS ===============-->
     <script src="assets/js/main.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sql.js/dist/sql-wasm.js"></script>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script type="module" src="./assets/js/details.js"></script>
   </body>
 </html>

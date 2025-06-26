@@ -4,26 +4,13 @@ import Swiper from "https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.brow
 //! new Products
 const bannerDiv = document.querySelector("#productContainerGridMain");
 
-bannerDiv.innerHTML = NewProducts.map(
+bannerDiv.innerHTML = NewProducts.reverse().slice(-6).map(
   (item) =>
     `
-  <div class="product__item" id="products" data-category="${item.productCategory}" data-type="${item.productType}">
+  <div class="product__item" id="products" data-category="${item.productCategory}" data-type="${item.productType}"q>
                 <div class="product__banner">
-                  <a href="details.html" class="product__images">
                     <img src="${item.productPic}" alt="" class="product__img default" />
                     <img src="${item.productPic}" alt="" class="product__img hover" />
-                  </a>
-                  <div class="product__actions">
-                    <a href="#" class="action__btn" aria-label="Quick View">
-                      <i class="fi fi-rs-eye"></i>
-                    </a>
-                    <a href="#" class="action__btn" aria-label="Add to Wishlist">
-                      <i class="fi fi-rs-heart"></i>
-                    </a>
-                    <a href="#" class="action__btn" aria-label="Compare">
-                      <i class="fi fi-rs-shuffle"></i>
-                    </a>
-                  </div>
                   <div class="product__badge light-pink">Hot</div>
                 </div>
                 <div class="product__content">
@@ -31,21 +18,34 @@ bannerDiv.innerHTML = NewProducts.map(
                   <a href="details.html">
                     <h3 class="product__title">${item.productName}</h3>
                   </a>
+                  <span class="product__category">${item.productInfo}<br></span>
                   <div class="product__price flex">
                     <span class="new__price">$238.85</span>
                     <span class="old__price">$245.8</span>
                   </div>
-                  <a href="#" class="action__btn cart__btn" aria-label="Add To Cart">
-                    <i class="fi fi-rs-shopping-bag-add"></i>
-                  </a>
                 </div>
-              </div>
+                <div style="text-align: center;">
+                <button id="details" style=" padding: 10px 20px;
+                margin-bottom: 10px;
+                                font-size: 1em;
+                                cursor: pointer;
+                                border: none;
+                                border-radius: 4px;
+                                width: 150px;
+                                background-color: rgb(21, 70, 204);
+                                color: white;" data-rowid="${item.productId}">ver</button>
+                  </div>
+          </div>
+              
     `
 ).join("");
 
-document.querySelectorAll(".product-item").forEach((item) => {
+document.querySelectorAll("#details").forEach((item) => {
   item.addEventListener("click", () => {
     const id = item.getAttribute("data-rowid");
-    window.location.href = `products.html?id=${id}`;
+    window.location.href = `details.html?id=${id}`;
   });
 });
+
+
+
