@@ -26,7 +26,7 @@
     <header class="header">
       <div class="header__top">
         <div class="header__container container">
-          <div class="header__contact"><ion-icon name="logo-whatsapp" class="ionicons"></ion-icon><span> 336437-7951</span> <ion-icon name="location-outline" class="ionicons"></ion-icon><span> Belgrano</span></div>
+          <div class="header__contact"><ion-icon name="logo-whatsapp" class="ionicons"></ion-icon><span> 336437-7951</span> <ion-icon name="location-outline" class="ionicons"></ion-icon><span> Belgrano 2279 - V. Constitución, Santa Fe </span></div>
           <p class="header__alert-news">Aberturas Fuerte Hogar</p>
           <!-- <a href="login-register.html" class="header__top-action"> Iniciar sesión / Registrarse </a> -->
         </div>
@@ -57,19 +57,12 @@
             </li>
           </ul>
         </div>
-        <!-- <div class="header__user-actions">
-          <a href="wishlist.html" class="header__action-btn" title="Wishlist">
-            <img src="assets/img/icon-heart.svg" alt="" />
-            <span class="count">3</span>
-          </a>
+        <div class="header__user-actions">
           <a href="cart.html" class="header__action-btn" title="Cart">
             <img src="assets/img/icon-cart.svg" alt="" />
-            <span class="count">3</span>
+            <!-- <span class="count">3</span> -->
           </a>
-          <div class="header__action-btn nav__toggle" id="nav-toggle">
-            <img src="./assets//img/menu-burger.svg" alt="" />
-          </div>
-        </div> -->
+        </div>
       </nav>
     </header>
 
@@ -90,96 +83,45 @@
       <section class="checkout section--lg">
         <div class="checkout__container container grid">
           <div class="checkout__group">
-            <h3 class="section__title">Billing Details</h3>
+            <h3 class="section__title">Detalles para la compra</h3>
             <form class="form grid">
-              <input type="text" placeholder="Name" class="form__input" />
-              <input type="text" placeholder="Address" class="form__input" />
-              <input type="text" placeholder="City" class="form__input" />
-              <input type="text" placeholder="Country" class="form__input" />
-              <input type="text" placeholder="Postcode" class="form__input" />
-              <input type="text" placeholder="Phone" class="form__input" />
-              <input type="email" placeholder="Email" class="form__input" />
-              <h3 class="checkout__title">Additional Information</h3>
+              <input type="text" placeholder="Nombre y apellido" class="form__input" />
+              <input type="text" placeholder="Dirección (obligatorio para envíos)" class="form__input" />
+              <input type="text" placeholder="Teléfono" class="form__input" />
+              <input type="email" placeholder="Tu correo electrónico" class="form__input" id="correoCliente" required />
+              <h3 class="checkout__title">Información adicional (opcional)</h3>
               <textarea
                 name=""
-                placeholder="order note"
+                placeholder="Casa color gris con patio delantero amplio..."
                 class="form__input textarea"
               ></textarea>
             </form>
           </div>
           <div class="checkout__group">
-            <h3 class="section__title">Cart Totals</h3>
-            <table class="order__table">
-              <thead>
-                <tr>
-                  <th colspan="2">Products</th>
-                  <th>Total</th>
-                </tr>
-              </thead>
-
-              <tbody>
-                <tr>
-                  <td>
-                    <img
-                      src="./assets/img/product-1-2.jpg"
-                      alt=""
-                      class="order__img"
-                    />
-                  </td>
-                  <td>
-                    <h3 class="table__title">Yidarton Women Summer Blue</h3>
-                    <p class="table__quantity">x 2</p>
-                  </td>
-                  <td><span class="table__price">$180.00</span></td>
-                </tr>
-                <tr>
-                  <td>
-                    <img
-                      src="./assets/img/product-2-1.jpg"
-                      alt=""
-                      class="order__img"
-                    />
-                  </td>
-                  <td>
-                    <h3 class="table__title">LDB Moon Summer</h3>
-                    <p class="table__quantity">x 1</p>
-                  </td>
-                  <td><span class="table__price">$65.00</span></td>
-                </tr>
-                <tr>
-                  <td>
-                    <img
-                      src="./assets/img/product-7-1.jpg"
-                      alt=""
-                      class="order__img"
-                    />
-                  </td>
-                  <td>
-                    <h3 class="table__title">Women Short Sleeve Loose</h3>
-                    <p class="table__quantity">x 2</p>
-                  </td>
-                  <td><span class="table__price">$35.00</span></td>
-                </tr>
-                <tr>
-                  <td><span class="order__subtitle">Subtotal</span></td>
-                  <td colspan="2"><span class="table__price">$280.00</span></td>
-                </tr>
-                <tr>
-                  <td><span class="order__subtitle">Shipping</span></td>
-                  <td colspan="2">
-                    <span class="table__price">Free Shipping</span>
-                  </td>
-                </tr>
-                <tr>
-                  <td><span class="order__subtitle">Total</span></td>
-                  <td colspan="2">
-                    <span class="order__grand-total">$280.00</span>
-                  </td>
-                </tr>
-              </tbody>
+            <h3 class="section__title">Total</h3>
+            <table class="order__table" id="checkoutSummaryTable">
+            <thead>
+              <tr>
+                <th colspan="2">Producto</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            
+            <tbody id="checkoutCartBody">
+              <!-- Productos se inyectan desde JS -->
+            </tbody>
+            <div class="checkout__shipping-option">
+              <input type="checkbox" id="includeShipping" checked />
+              <label for="includeShipping">Incluir envío (+$20000)</label>
+            </div>
+            <div>
+            <input type="checkbox" id="shippingToUSA" />
+              <label for="shippingToUSA">Envío a V. Constitución (sin costo de envío)</label>
+            </div>
             </table>
+
             <div class="payment__methods">
-              <h3 class="checkout__title payment__title">Payment</h3>
+              <h3 class="checkout__title payment__title">Métodos de abono</h3>
               <div class="payment__option flex">
                 <input
                   type="radio"
@@ -189,7 +131,7 @@
                   class="payment__input"
                 />
                 <label for="l1" class="payment__label"
-                  >Direct Bank Transfer</label
+                  >Transferencia</label
                 >
               </div>
               <div class="payment__option flex">
@@ -199,7 +141,7 @@
                   id="l2"
                   class="payment__input"
                 />
-                <label for="l2" class="payment__label">Check Payment</label>
+                <label for="l2" class="payment__label">QR </label><span style="color: gray;">(se le enviará un QR por mensaje para que pueda abonar)</span>
               </div>
               <div class="payment__option flex">
                 <input
@@ -208,37 +150,26 @@
                   id="l3"
                   class="payment__input"
                 />
-                <label for="l3" class="payment__label">Paypal</label>
+                <label for="l3" class="payment__label">Tarjetas de crédito/débito</label><span style="color: gray;">(por temas de seguridad, solamente en local)</span>
               </div>
             </div>
-            <button class="btn btn--md">Place Order</button>
+            <button class="btn btn--md">REalizar pedido</button>
           </div>
         </div>
       </section>
 
       <!--=============== NEWSLETTER ===============-->
-      <section class="newsletter section">
+      <section class="newsletter section home__newsletter">
         <div class="newsletter__container container grid">
           <h3 class="newsletter__title flex">
-            <img
-              src="./assets/img/icon-email.svg"
-              alt=""
-              class="newsletter__icon"
-            />
-            Sign in to Newsletter
+            <img src="./assets/img/icon-email.svg" alt="" class="newsletter__icon" />
+            aberturasfuertehogar@gmail.com
           </h3>
-          <p class="newsletter__description">
-            ...and receive $25 coupon for first shopping.
-          </p>
-          <form action="" class="newsletter__form">
-            <input
-              type="text"
-              placeholder="Enter Your Email"
-              class="newsletter__input"
-            />
-            <button type="submit" class="newsletter__btn">Subscribe</button>
-          </form>
+          <p class="newsletter__description"><ion-icon name="logo-whatsapp" class="ionicons"></ion-icon> 336437-7951</p>
+          <p class="newsletter__description"><ion-icon name="logo-instagram" class="ionicons"></ion-icon> @aberturasfuertehogar</p>
+          <p class="newsletter__description"><ion-icon name="logo-facebook" class="ionicons"></ion-icon> Aberturas Fuerte Hogar</p>
         </div>
+        <b><p class="newsletter__friendly">¡No dudes en escribirnos por cualquier consulta!</p></b>
       </section>
     </main>
 
@@ -247,93 +178,41 @@
       <div class="footer__container grid">
         <div class="footer__content">
           <a href="index.html" class="footer__logo">
-            <img src="./assets/img/logo.svg" alt="" class="footer__logo-img" />
+            <img src="./assets/img/logo.png" alt="" class="footer__logo-img" />
           </a>
-          <h4 class="footer__subtitle">Contact</h4>
-          <p class="footer__description">
-            <span>Address:</span> 13 Tlemcen Road, Street 32, Beb-Wahren
-          </p>
-          <p class="footer__description">
-            <span>Phone:</span> +01 2222 365 /(+91) 01 2345 6789
-          </p>
-          <p class="footer__description">
-            <span>Hours:</span> 10:00 - 18:00, Mon - Sat
-          </p>
+          <h4 class="footer__subtitle">Contactos</h4>
+          <p class="footer__description"><span>Dirección:</span> Belgrano 2279 </p>
+          <p class="footer__description"><span>Teléfono:</span> 336437-7951</p>
+          <p class="footer__description"><span>Horarios:</span> 10:00 - 18:00, Mon - Sat</p>
           <div class="footer__social">
-            <h4 class="footer__subtitle">Follow Me</h4>
+            <h4 class="footer__subtitle">¡Seguinos!</h4>
             <div class="footer__links flex">
               <a href="#">
-                <img
-                  src="./assets/img/icon-facebook.svg"
-                  alt=""
-                  class="footer__social-icon"
-                />
+                <img src="./assets/img/icon-facebook.svg" alt="" class="footer__social-icon" />
               </a>
               <a href="#">
-                <img
-                  src="./assets/img/icon-twitter.svg"
-                  alt=""
-                  class="footer__social-icon"
-                />
-              </a>
-              <a href="#">
-                <img
-                  src="./assets/img/icon-instagram.svg"
-                  alt=""
-                  class="footer__social-icon"
-                />
-              </a>
-              <a href="#">
-                <img
-                  src="./assets/img/icon-pinterest.svg"
-                  alt=""
-                  class="footer__social-icon"
-                />
-              </a>
-              <a href="#">
-                <img
-                  src="./assets/img/icon-youtube.svg"
-                  alt=""
-                  class="footer__social-icon"
-                />
+                <img src="./assets/img/icon-instagram.svg" alt="" class="footer__social-icon" />
               </a>
             </div>
           </div>
         </div>
-        <div class="footer__content">
-          <h3 class="footer__title">Address</h3>
+        <div class="footer__content" id="footer">
+          <h3 class="footer__title">Información</h3>
           <ul class="footer__links">
-            <li><a href="#" class="footer__link">About Us</a></li>
-            <li><a href="#" class="footer__link">Delivery Information</a></li>
-            <li><a href="#" class="footer__link">Privacy Policy</a></li>
-            <li><a href="#" class="footer__link">Terms & Conditions</a></li>
-            <li><a href="#" class="footer__link">Contact Us</a></li>
-            <li><a href="#" class="footer__link">Support Center</a></li>
+            <li><a href="#" class="footer__link">Sobre nosotros</a></li>
+            <li><a href="#" class="footer__link">Envíos</a></li>
+            <li><a href="#" class="footer__link">Nuestros contactos</a></li>
+            <li><a href="#" class="footer__link">Cómo abonar</a></li>
           </ul>
         </div>
         <div class="footer__content">
-          <h3 class="footer__title">My Account</h3>
-          <ul class="footer__links">
-            <li><a href="#" class="footer__link">Sign In</a></li>
-            <li><a href="#" class="footer__link">View Cart</a></li>
-            <li><a href="#" class="footer__link">My Wishlist</a></li>
-            <li><a href="#" class="footer__link">Track My Order</a></li>
-            <li><a href="#" class="footer__link">Help</a></li>
-            <li><a href="#" class="footer__link">Order</a></li>
-          </ul>
-        </div>
-        <div class="footer__content">
-          <h3 class="footer__title">Secured Payed Gateways</h3>
-          <img
-            src="./assets/img/payment-method.png"
-            alt=""
-            class="payment__img"
-          />
+          <h3 class="footer__title">Métodos seguros</h3>
+          <img src="./assets/img/payment-method.png" alt="" class="payment__img" />
         </div>
       </div>
       <div class="footer__bottom">
-        <p class="copyright">&copy; 2024 Evara. All right reserved</p>
-        <span class="designer">Designer by Crypticalcoder</span>
+        <p class="copyright">&copy; 2025 Fuerte Hogar. Todos los derechos reservados.</p>
+        <span class="designer">Diseñado por Lucas Ojeda</span>
       </div>
     </footer>
 
@@ -342,5 +221,107 @@
 
     <!--=============== MAIN JS ===============-->
     <script src="assets/js/main.js"></script>
+
+    <script type="module" src="./assets/js/checkout.js"></script>
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "MoKBGgF3RjpOdWWpM",
+      });
+   })();
+</script>
+
+
+
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const tableBody = document.querySelector('.order__table tbody');
+  const includeShippingCheckbox = document.getElementById('includeShipping');
+  const shippingToUSACheckbox = document.getElementById('shippingToUSA');
+  const shippingCost = 10;
+
+  const carrito = JSON.parse(localStorage.getItem('pedidoActual')) || [];
+
+  function formatCurrency(number) {
+    return `$${number.toLocaleString('es-AR', {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    })}`;
+  }
+
+  function renderCheckoutItems() {
+    if (carrito.length === 0) {
+      tableBody.innerHTML = `
+        <tr><td colspan="3" style="text-align: center;">El carrito está vacío.</td></tr>
+      `;
+      return;
+    }
+
+    let rowsHTML = '';
+    let subtotal = 0;
+
+    carrito.forEach(item => {
+      const precio = parseFloat(item.precio.replace('$', '').replace(',', ''));
+      const totalItem = precio * item.cantidad;
+      subtotal += totalItem;
+
+      rowsHTML += `
+        <tr>
+          <td><img src="${item.imagen}" alt="${item.nombre}" class="order__img" /></td>
+          <td>
+            <h3 class="table__title">${item.nombre}</h3>
+            <p class="table__quantity">x ${item.cantidad}</p>
+          </td>
+          <td><span class="table__price">${formatCurrency(totalItem)}</span></td>
+        </tr>
+      `;
+    });
+
+    // Determinar costo de envío según checkboxes
+    let envioTexto = 'Retira en local';
+    let envioCosto = 0;
+
+    if (includeShippingCheckbox.checked) {
+      envioCosto = shippingCost;
+
+      if (shippingToUSACheckbox.checked) {
+        envioCosto = 0; // envío gratis para USA
+        envioTexto = 'Envío a V. Constitución (sin costo)';
+      } else {
+        envioTexto = formatCurrency(shippingCost);
+      }
+    }
+
+    const totalFinal = subtotal + envioCosto;
+
+    rowsHTML += `
+      <tr>
+  <td>Subtotal</td>
+  <td colspan="2"><span id="checkoutSubtotal"></span></td>
+</tr>
+<tr>
+  <td>Envío</td>
+  <td colspan="2"><span id="checkoutShipping"></span></td>
+</tr>
+<tr>
+  <td>Total</td>
+  <td colspan="2"><strong id="checkoutTotal"></strong></td>
+</tr>
+    `;
+
+    tableBody.innerHTML = rowsHTML;
+  }
+
+  // Recalcular al cambiar cualquiera de los checkboxes
+  includeShippingCheckbox.addEventListener('change', renderCheckoutItems);
+  shippingToUSACheckbox.addEventListener('change', renderCheckoutItems);
+
+  renderCheckoutItems();
+});
+</script>
   </body>
 </html>
